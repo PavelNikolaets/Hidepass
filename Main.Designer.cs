@@ -34,6 +34,8 @@
             testDesInput = new TextBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
             SuspendLayout();
             // 
             // testCreateBlockButton
@@ -44,6 +46,7 @@
             testCreateBlockButton.TabIndex = 0;
             testCreateBlockButton.Text = "Создать блок";
             testCreateBlockButton.UseVisualStyleBackColor = true;
+            testCreateBlockButton.Click += testCreateBlockButton_Click;
             // 
             // testCreateCellButton
             // 
@@ -53,6 +56,7 @@
             testCreateCellButton.TabIndex = 1;
             testCreateCellButton.Text = "Создать ячейку";
             testCreateCellButton.UseVisualStyleBackColor = true;
+            testCreateCellButton.Click += testCreateCellButton_Click;
             // 
             // testNameInput
             // 
@@ -87,11 +91,30 @@
             textBox2.Size = new Size(233, 23);
             textBox2.TabIndex = 5;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(555, 250);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Описание";
+            textBox3.Size = new Size(233, 69);
+            textBox3.TabIndex = 6;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(555, 221);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Название";
+            textBox4.Size = new Size(233, 23);
+            textBox4.TabIndex = 7;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(testDesInput);
@@ -112,5 +135,7 @@
         private TextBox testDesInput;
         private TextBox textBox1;
         private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
     }
 }

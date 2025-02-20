@@ -1,11 +1,9 @@
 ﻿
-using Microsoft.VisualBasic;
-
 namespace Hidepass.ObjectTemplates
 {
-    internal class CellPassword(int id, string name, string description, string login, string password)
+    internal class CellPassword(/*int id,*/ string name, string description, string login, string password)
     {
-        public int Id { get; } = id;
+        //public int Id { get; } = id;
         public string Name { get; set; } = name;
         public string Description { get; set; } = description;
         public string Login {  get; set; } = login;
