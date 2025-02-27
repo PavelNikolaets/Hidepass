@@ -32,14 +32,16 @@
             testCreateCellButton = new Button();
             testNameInput = new TextBox();
             testDesInput = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            inputLogin = new TextBox();
+            inputPassword = new TextBox();
+            inputDesc = new TextBox();
+            inputName = new TextBox();
+            comboBoxTest = new ComboBox();
             SuspendLayout();
             // 
             // testCreateBlockButton
             // 
+            testCreateBlockButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             testCreateBlockButton.Location = new Point(12, 383);
             testCreateBlockButton.Name = "testCreateBlockButton";
             testCreateBlockButton.Size = new Size(233, 55);
@@ -50,6 +52,7 @@
             // 
             // testCreateCellButton
             // 
+            testCreateCellButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             testCreateCellButton.Location = new Point(555, 383);
             testCreateCellButton.Name = "testCreateCellButton";
             testCreateCellButton.Size = new Size(233, 55);
@@ -60,6 +63,7 @@
             // 
             // testNameInput
             // 
+            testNameInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             testNameInput.Location = new Point(12, 279);
             testNameInput.Name = "testNameInput";
             testNameInput.PlaceholderText = "Название";
@@ -68,6 +72,7 @@
             // 
             // testDesInput
             // 
+            testDesInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             testDesInput.Location = new Point(12, 308);
             testDesInput.Multiline = true;
             testDesInput.Name = "testDesInput";
@@ -75,48 +80,62 @@
             testDesInput.Size = new Size(233, 69);
             testDesInput.TabIndex = 3;
             // 
-            // textBox1
+            // inputLogin
             // 
-            textBox1.Location = new Point(555, 325);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Логин";
-            textBox1.Size = new Size(233, 23);
-            textBox1.TabIndex = 4;
+            inputLogin.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inputLogin.Location = new Point(555, 325);
+            inputLogin.Name = "inputLogin";
+            inputLogin.PlaceholderText = "Логин";
+            inputLogin.Size = new Size(233, 23);
+            inputLogin.TabIndex = 4;
             // 
-            // textBox2
+            // inputPassword
             // 
-            textBox2.Location = new Point(555, 354);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Пароль";
-            textBox2.Size = new Size(233, 23);
-            textBox2.TabIndex = 5;
+            inputPassword.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inputPassword.Location = new Point(555, 354);
+            inputPassword.Name = "inputPassword";
+            inputPassword.PlaceholderText = "Пароль";
+            inputPassword.Size = new Size(233, 23);
+            inputPassword.TabIndex = 5;
             // 
-            // textBox3
+            // inputDesc
             // 
-            textBox3.Location = new Point(555, 250);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Описание";
-            textBox3.Size = new Size(233, 69);
-            textBox3.TabIndex = 6;
+            inputDesc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inputDesc.Location = new Point(555, 250);
+            inputDesc.Multiline = true;
+            inputDesc.Name = "inputDesc";
+            inputDesc.PlaceholderText = "Описание";
+            inputDesc.Size = new Size(233, 69);
+            inputDesc.TabIndex = 6;
             // 
-            // textBox4
+            // inputName
             // 
-            textBox4.Location = new Point(555, 221);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Название";
-            textBox4.Size = new Size(233, 23);
-            textBox4.TabIndex = 7;
+            inputName.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inputName.Location = new Point(555, 221);
+            inputName.Name = "inputName";
+            inputName.PlaceholderText = "Название";
+            inputName.Size = new Size(233, 23);
+            inputName.TabIndex = 7;
+            // 
+            // comboBoxTest
+            // 
+            comboBoxTest.DropDownStyle = ComboBoxStyle.Simple;
+            comboBoxTest.FormattingEnabled = true;
+            comboBoxTest.Location = new Point(555, 12);
+            comboBoxTest.Name = "comboBoxTest";
+            comboBoxTest.Size = new Size(233, 203);
+            comboBoxTest.TabIndex = 8;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(comboBoxTest);
+            Controls.Add(inputName);
+            Controls.Add(inputDesc);
+            Controls.Add(inputPassword);
+            Controls.Add(inputLogin);
             Controls.Add(testDesInput);
             Controls.Add(testNameInput);
             Controls.Add(testCreateCellButton);
@@ -133,9 +152,10 @@
         private Button testCreateCellButton;
         private TextBox testNameInput;
         private TextBox testDesInput;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox inputLogin;
+        private TextBox inputPassword;
+        private TextBox inputDesc;
+        private TextBox inputName;
+        private ComboBox comboBoxTest;
     }
 }

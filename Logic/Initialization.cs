@@ -10,12 +10,12 @@ namespace Hidepass.Logic
         {
             if (Directory.Exists(dirPath) == false)
             {
-                Directory.CreateDirectory(dirPath);
+                Directory.CreateDirectory(dirPath) ;
             }
 
             if (File.Exists(fileMetadata) == false)
             {
-                File.Create(fileMetadata);
+                File.Create(fileMetadata).Close();
             }
         }
     }

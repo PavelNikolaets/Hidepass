@@ -19,10 +19,17 @@ namespace Hidepass.Logic.MVC.Block
 
             obj.Blocks.Add(new(name, description, pathToBlock));
 
-            File.Create(pathToBlock);
+            File.Create(pathToBlock).Close();
             File.WriteAllText(Main.GlobalPathToFileMetadata, JsonService.ToJson(obj));
 
             MessageBox.Show("Блок создан!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static void ModelDeleteBlock(string pathToBlock, int index)
+        {
+
+
+            File.Delete(pathToBlock);
         }
     }
 }
