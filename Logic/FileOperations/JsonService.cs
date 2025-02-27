@@ -1,4 +1,5 @@
 ﻿
+using System.Text.Encodings.Web;
 using System.Text.Json;
 
 namespace Hidepass.Logic.FileOperations
@@ -9,6 +10,7 @@ namespace Hidepass.Logic.FileOperations
         {
             IncludeFields = true,
             WriteIndented = true,
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 
         public static string ToJson<T>(T inputObj)

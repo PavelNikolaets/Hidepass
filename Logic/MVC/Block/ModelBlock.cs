@@ -7,13 +7,22 @@ namespace Hidepass.Logic.MVC.Block
 {
     internal class ModelBlock
     {
-        public static void ModelCreateBlock(string name, string description)
+        public static void ModelCreateBlock(string name, string description, string pathToBlock)
         {
-            string pathToFile = @$"{Main.GlobalPathToDir}\{name}.json";
-            
-            File.WriteAllText(pathToFile, JsonService.ToJson(new BlockPassword()));
+            string jsonMeta = File.ReadAllText(Main.GlobalPathToFileMetadata);
+            RootBlock obj = new();
 
-            MessageBox.Show("Блок создан!");
+            if (jsonMeta != "")
+            {
+                obj = JsonService.ToObject<RootBlock>(jsonMeta);
+            }
+
+            obj.Blocks.Add(new(name, description, pathToBlock));
+
+            File.Create(pathToBlock);
+            File.WriteAllText(Main.GlobalPathToFileMetadata, JsonService.ToJson(obj));
+
+            MessageBox.Show("Блок создан!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

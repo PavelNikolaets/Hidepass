@@ -7,25 +7,15 @@ namespace Hidepass.Logic.MVC.Block
 {
     internal class ControllerBlock
     {
-        public static void ControlCreateBlock(string name, string description)
+        public static void ControlCreateBlock(string name, string description, string pathToBlock)
         {
-            if (name != "" && description != "")
+            if (name != "" && description != "" && pathToBlock != "")
             {
-                ListBlocks obj = new();
-                obj.BlocksMetadata.Add(new(name, description, Main.GlobalPathToFile));
-
-                if (File.Exists(Main.GlobalPathToFile))
-                {
-                    ListBlocks readObj = JsonService.ToObject<ListBlocks>(File.ReadAllText(Main.GlobalPathToFile));
-                    obj.BlocksMetadata = readObj.BlocksMetadata;
-                }
-
-                File.WriteAllText(Main.GlobalPathToFile, JsonService.ToJson(obj));
-                ModelBlock.ModelCreateBlock(name, description);
+                ModelBlock.ModelCreateBlock(name, description, pathToBlock);
             }
             else
             {
-                MessageBox.Show("Не введено название или описание!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Заполните все необходимые поля!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
