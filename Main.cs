@@ -1,9 +1,11 @@
 
+using Hidepass.Logic;
 using Hidepass.Logic.FileOperations;
+using Hidepass.Logic.MVC;
 using Hidepass.Logic.MVC.Block;
 using Hidepass.Logic.MVC.Cell;
 using Hidepass.ObjectTemplates;
-using Hidepass.Logic;
+using File = System.IO.File;
 
 namespace Hidepass
 {
@@ -18,23 +20,24 @@ namespace Hidepass
             InitializeComponent();
             if(File.ReadAllText(GlobalPathToFileMetadata) != "")
             {
-                JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks.ForEach(block => comboBoxTest.Items.Add(block.Name));
+                ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
             }
         }
 
         private void testCreateBlockButton_Click(object sender, EventArgs e)
         {
             ControllerBlock.ControlCreateBlock(testNameInput.Text, testDesInput.Text, @$"{GlobalPathToDir}\{testNameInput.Text}.json");
-            comboBoxTest.Items.Clear();
-            JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks.ForEach(block => comboBoxTest.Items.Add(block.Name));
+            ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
         }
 
         private void testCreateCellButton_Click(object sender, EventArgs e)
         {
-            int selectIndex = comboBoxTest.SelectedIndex;
+            int selectIndex = listBlocks.SelectedIndex;
             string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[selectIndex].PathToFile;
 
             ControllerCell.ControlCreateCell(inputName.Text, inputDesc.Text, inputLogin.Text, inputPassword.Text, path);
+
+            ViewPassword.DisplayCells(listCells, path);
         }
     }
 }

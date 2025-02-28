@@ -27,8 +27,10 @@ namespace Hidepass.Logic.MVC.Block
 
         public static void ModelDeleteBlock(string pathToBlock, int index)
         {
+            RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GlobalPathToFileMetadata));
+            obj.Blocks.RemoveAt(index);
 
-
+            File.WriteAllText(Main.GlobalPathToFileMetadata, JsonService.ToJson(obj));
             File.Delete(pathToBlock);
         }
     }

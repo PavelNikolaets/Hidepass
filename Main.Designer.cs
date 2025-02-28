@@ -36,12 +36,18 @@
             inputPassword = new TextBox();
             inputDesc = new TextBox();
             inputName = new TextBox();
-            comboBoxTest = new ComboBox();
+            listCells = new ListBox();
+            listBlocks = new ListBox();
+            buttonBlockDelete = new Button();
+            buttonBlockChange = new Button();
+            buttonDeleteCell = new Button();
+            buttonChangeCell = new Button();
             SuspendLayout();
             // 
             // testCreateBlockButton
             // 
             testCreateBlockButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            testCreateBlockButton.Cursor = Cursors.Hand;
             testCreateBlockButton.Location = new Point(12, 383);
             testCreateBlockButton.Name = "testCreateBlockButton";
             testCreateBlockButton.Size = new Size(233, 55);
@@ -53,6 +59,7 @@
             // testCreateCellButton
             // 
             testCreateCellButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            testCreateCellButton.Cursor = Cursors.Hand;
             testCreateCellButton.Location = new Point(555, 383);
             testCreateCellButton.Name = "testCreateCellButton";
             testCreateCellButton.Size = new Size(233, 55);
@@ -117,21 +124,70 @@
             inputName.Size = new Size(233, 23);
             inputName.TabIndex = 7;
             // 
-            // comboBoxTest
+            // listCells
             // 
-            comboBoxTest.DropDownStyle = ComboBoxStyle.Simple;
-            comboBoxTest.FormattingEnabled = true;
-            comboBoxTest.Location = new Point(555, 12);
-            comboBoxTest.Name = "comboBoxTest";
-            comboBoxTest.Size = new Size(233, 203);
-            comboBoxTest.TabIndex = 8;
+            listCells.ItemHeight = 15;
+            listCells.Location = new Point(251, 222);
+            listCells.Name = "listCells";
+            listCells.Size = new Size(298, 214);
+            listCells.TabIndex = 9;
+            // 
+            // listBlocks
+            // 
+            listBlocks.FormattingEnabled = true;
+            listBlocks.ItemHeight = 15;
+            listBlocks.Location = new Point(251, 12);
+            listBlocks.Name = "listBlocks";
+            listBlocks.Size = new Size(298, 199);
+            listBlocks.TabIndex = 10;
+            // 
+            // buttonBlockDelete
+            // 
+            buttonBlockDelete.Location = new Point(12, 12);
+            buttonBlockDelete.Name = "buttonBlockDelete";
+            buttonBlockDelete.Size = new Size(233, 53);
+            buttonBlockDelete.TabIndex = 11;
+            buttonBlockDelete.Text = "Удалить блок";
+            buttonBlockDelete.UseVisualStyleBackColor = true;
+            // 
+            // buttonBlockChange
+            // 
+            buttonBlockChange.Location = new Point(12, 71);
+            buttonBlockChange.Name = "buttonBlockChange";
+            buttonBlockChange.Size = new Size(233, 53);
+            buttonBlockChange.TabIndex = 12;
+            buttonBlockChange.Text = "Изменить блок";
+            buttonBlockChange.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteCell
+            // 
+            buttonDeleteCell.Location = new Point(12, 158);
+            buttonDeleteCell.Name = "buttonDeleteCell";
+            buttonDeleteCell.Size = new Size(233, 53);
+            buttonDeleteCell.TabIndex = 13;
+            buttonDeleteCell.Text = "Удалить ячейку";
+            buttonDeleteCell.UseVisualStyleBackColor = true;
+            // 
+            // buttonChangeCell
+            // 
+            buttonChangeCell.Location = new Point(12, 220);
+            buttonChangeCell.Name = "buttonChangeCell";
+            buttonChangeCell.Size = new Size(233, 53);
+            buttonChangeCell.TabIndex = 14;
+            buttonChangeCell.Text = "Изменить ячейку";
+            buttonChangeCell.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBoxTest);
+            Controls.Add(buttonChangeCell);
+            Controls.Add(buttonDeleteCell);
+            Controls.Add(buttonBlockChange);
+            Controls.Add(buttonBlockDelete);
+            Controls.Add(listBlocks);
+            Controls.Add(listCells);
             Controls.Add(inputName);
             Controls.Add(inputDesc);
             Controls.Add(inputPassword);
@@ -156,6 +212,11 @@
         private TextBox inputPassword;
         private TextBox inputDesc;
         private TextBox inputName;
-        private ComboBox comboBoxTest;
+        private ListBox listCells;
+        private ListBox listBlocks;
+        private Button buttonBlockDelete;
+        private Button buttonBlockChange;
+        private Button buttonDeleteCell;
+        private Button buttonChangeCell;
     }
 }

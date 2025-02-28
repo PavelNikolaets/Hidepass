@@ -3,19 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\pavel\\source\\repos\\Hidepass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|C:\\Users\\pavel\\source\\repos\\Hidepass\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pavel\\Documents\\Hidepass\\Test.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\objecttemplates\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:objecttemplates\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\objecttemplates\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:objecttemplates\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\modelblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,16 +23,28 @@
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\cell\\modelcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\cell\\controllercell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\cell\\controllercell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\fileoperations\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\fileoperations\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,64 +54,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Block.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\ObjectTemplates\\Block.cs",
+              "RelativeDocumentMoniker": "ObjectTemplates\\Block.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\ObjectTemplates\\Block.cs",
+              "RelativeToolTip": "ObjectTemplates\\Block.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T17:10:23.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cell.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\ObjectTemplates\\Cell.cs",
+              "RelativeDocumentMoniker": "ObjectTemplates\\Cell.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\ObjectTemplates\\Cell.cs",
+              "RelativeToolTip": "ObjectTemplates\\Cell.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T17:08:32.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ViewPassword.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
+              "RelativeDocumentMoniker": "Logic\\MVC\\ViewPassword.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
+              "RelativeToolTip": "Logic\\MVC\\ViewPassword.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T16:29:33.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
               "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T17:39:28.147Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Test.json",
-              "DocumentMoniker": "C:\\Users\\pavel\\Documents\\Hidepass\\Test.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\Documents\\Hidepass\\Test.json",
-              "ToolTip": "C:\\Users\\pavel\\Documents\\Hidepass\\Test.json",
-              "RelativeToolTip": "..\\..\\..\\Documents\\Hidepass\\Test.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-27T22:24:45.533Z",
-              "EditorCaption": ""
+              "DocumentIndex": 0,
+              "Title": "Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T19:09:16.315Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ControllerBlock.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ControllerBlock.cs",
               "RelativeDocumentMoniker": "Logic\\MVC\\Block\\ControllerBlock.cs",
               "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ControllerBlock.cs",
               "RelativeToolTip": "Logic\\MVC\\Block\\ControllerBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T17:46:02.78Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ModelBlock.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
               "RelativeDocumentMoniker": "Logic\\MVC\\Block\\ModelBlock.cs",
               "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
               "RelativeToolTip": "Logic\\MVC\\Block\\ModelBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-26T17:47:23.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ModelCell.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ModelCell.cs",
               "RelativeDocumentMoniker": "Logic\\MVC\\Cell\\ModelCell.cs",
@@ -115,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ControllerCell.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ControllerCell.cs",
               "RelativeDocumentMoniker": "Logic\\MVC\\Cell\\ControllerCell.cs",
@@ -123,24 +169,11 @@
               "RelativeToolTip": "Logic\\MVC\\Cell\\ControllerCell.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T21:57:12.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T21:57:12.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
-              "RelativeDocumentMoniker": "Main.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "Main.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T19:09:16.315Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Initialization.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\Initialization.cs",
               "RelativeDocumentMoniker": "Logic\\Initialization.cs",
@@ -148,12 +181,11 @@
               "RelativeToolTip": "Logic\\Initialization.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T18:48:05.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-27T18:48:05.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "JsonService.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\FileOperations\\JsonService.cs",
               "RelativeDocumentMoniker": "Logic\\FileOperations\\JsonService.cs",
@@ -161,8 +193,7 @@
               "RelativeToolTip": "Logic\\FileOperations\\JsonService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T23:28:37.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T23:28:37.876Z"
             }
           ]
         }
