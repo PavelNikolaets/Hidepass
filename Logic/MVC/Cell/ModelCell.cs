@@ -10,12 +10,7 @@ namespace Hidepass.Logic.MVC.Cell
         public static void ModelCreateCell(string name, string description, string login, string password, string path)
         {
             string json = File.ReadAllText(path);
-            RootCell obj = new();
-
-            if (json != "" )
-            {
-                obj = JsonService.ToObject<RootCell>(json);
-            }
+            RootCell obj = json != "" ? JsonService.ToObject<RootCell>(json) : new();
 
             obj.Cells.Add(new(name, description, login, password));
 

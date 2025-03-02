@@ -5,7 +5,7 @@ namespace Hidepass.Logic.MVC.Cell
     {
         public static void ControlCreateCell(string name, string description, string login, string password, string path)
         {
-            string[] paramAll = [name, description, login, password, path];
+            string[] paramAll = [name, login, password, path];
             if (paramAll.All(p => p != ""))
             {
                 ModelCell.ModelCreateCell(name, description, login, password, path);

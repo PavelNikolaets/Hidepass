@@ -5,7 +5,7 @@ namespace Hidepass.Logic.MVC.Block
     {
         public static void ControlCreateBlock(string name, string description, string pathToBlock)
         {
-            string[] paramAll = [name, description, pathToBlock];
+            string[] paramAll = [name, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
                 ModelBlock.ModelCreateBlock(name, description, pathToBlock);

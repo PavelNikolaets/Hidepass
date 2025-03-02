@@ -26,7 +26,10 @@ namespace Hidepass
 
         private void testCreateBlockButton_Click(object sender, EventArgs e)
         {
-            ControllerBlock.ControlCreateBlock(testNameInput.Text, testDesInput.Text, @$"{GlobalPathToDir}\{testNameInput.Text}.json");
+            string pathToFile = @$"{GlobalPathToDir}\{testNameInput.Text}.json";
+
+            ControllerBlock.ControlCreateBlock(testNameInput.Text, testDesInput.Text, pathToFile);
+
             ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
         }
 

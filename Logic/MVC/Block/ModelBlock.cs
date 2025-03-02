@@ -10,12 +10,7 @@ namespace Hidepass.Logic.MVC.Block
         public static void ModelCreateBlock(string name, string description, string pathToBlock)
         {
             string jsonMeta = File.ReadAllText(Main.GlobalPathToFileMetadata);
-            RootBlock obj = new();
-
-            if (jsonMeta != "")
-            {
-                obj = JsonService.ToObject<RootBlock>(jsonMeta);
-            }
+            RootBlock obj = jsonMeta != "" ? JsonService.ToObject<RootBlock>(jsonMeta) : new();
 
             obj.Blocks.Add(new(name, description, pathToBlock));
 

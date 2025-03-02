@@ -126,6 +126,7 @@
             // 
             // listCells
             // 
+            listCells.Anchor = AnchorStyles.Bottom;
             listCells.ItemHeight = 15;
             listCells.Location = new Point(251, 222);
             listCells.Name = "listCells";
@@ -134,6 +135,7 @@
             // 
             // listBlocks
             // 
+            listBlocks.Anchor = AnchorStyles.Top;
             listBlocks.FormattingEnabled = true;
             listBlocks.ItemHeight = 15;
             listBlocks.Location = new Point(251, 12);
@@ -161,6 +163,7 @@
             // 
             // buttonDeleteCell
             // 
+            buttonDeleteCell.Anchor = AnchorStyles.Left;
             buttonDeleteCell.Location = new Point(12, 158);
             buttonDeleteCell.Name = "buttonDeleteCell";
             buttonDeleteCell.Size = new Size(233, 53);
@@ -170,6 +173,7 @@
             // 
             // buttonChangeCell
             // 
+            buttonChangeCell.Anchor = AnchorStyles.Left;
             buttonChangeCell.Location = new Point(12, 220);
             buttonChangeCell.Name = "buttonChangeCell";
             buttonChangeCell.Size = new Size(233, 53);
