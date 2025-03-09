@@ -151,6 +151,7 @@
             buttonBlockDelete.TabIndex = 11;
             buttonBlockDelete.Text = "Удалить блок";
             buttonBlockDelete.UseVisualStyleBackColor = true;
+            buttonBlockDelete.Click += buttonBlockDelete_Click;
             // 
             // buttonBlockChange
             // 
@@ -160,6 +161,7 @@
             buttonBlockChange.TabIndex = 12;
             buttonBlockChange.Text = "Изменить блок";
             buttonBlockChange.UseVisualStyleBackColor = true;
+            buttonBlockChange.Click += buttonBlockChange_Click;
             // 
             // buttonDeleteCell
             // 
@@ -170,6 +172,7 @@
             buttonDeleteCell.TabIndex = 13;
             buttonDeleteCell.Text = "Удалить ячейку";
             buttonDeleteCell.UseVisualStyleBackColor = true;
+            buttonDeleteCell.Click += buttonDeleteCell_Click;
             // 
             // buttonChangeCell
             // 
@@ -180,6 +183,7 @@
             buttonChangeCell.TabIndex = 14;
             buttonChangeCell.Text = "Изменить ячейку";
             buttonChangeCell.UseVisualStyleBackColor = true;
+            buttonChangeCell.Click += buttonChangeCell_Click;
             // 
             // Main
             // 

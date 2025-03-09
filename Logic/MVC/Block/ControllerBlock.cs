@@ -1,4 +1,8 @@
 ﻿
+using Hidepass.Logic.FileOperations;
+using Hidepass.ObjectTemplates;
+using static Hidepass.ObjectTemplates.EnumObject;
+
 namespace Hidepass.Logic.MVC.Block
 {
     internal class ControllerBlock
@@ -21,6 +25,14 @@ namespace Hidepass.Logic.MVC.Block
             if (Path.Exists(pathToBlock))
             {
                 ModelBlock.ModelDeleteBlock(pathToBlock, index);
+            }
+        }
+
+        public static void ControllerChangeBlock(int index, string name, string description)
+        {
+            if (JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GlobalPathToFileMetadata)).Blocks.Count >= index)
+            {
+                ModelBlock.ModelChangeBlock(index, name, description);
             }
         }
     }

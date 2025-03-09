@@ -27,6 +27,20 @@ namespace Hidepass.Logic.MVC.Block
 
             File.WriteAllText(Main.GlobalPathToFileMetadata, JsonService.ToJson(obj));
             File.Delete(pathToBlock);
+
+            MessageBox.Show("Блок удален!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static void ModelChangeBlock(int index, string name, string description)
+        {
+            RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GlobalPathToFileMetadata));
+
+            obj.Blocks[index].Name = name;
+            obj.Blocks[index].Description = description;
+
+            File.WriteAllText(Main.GlobalPathToFileMetadata, JsonService.ToJson(obj));
+
+            MessageBox.Show("Блок изменен!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

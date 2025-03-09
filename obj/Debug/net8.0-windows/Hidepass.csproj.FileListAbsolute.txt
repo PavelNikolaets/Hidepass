@@ -17,3 +17,4 @@ C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\ref\Hidepass.dll
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.CustomControl.Block.StripInfoBlock.resources
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.CustomControl.Cell.StripInfoCell.resources
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.CustomControl.ListInfo.resources
+C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.sourcelink.json
