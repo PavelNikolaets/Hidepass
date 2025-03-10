@@ -1,9 +1,9 @@
 
+using Hidepass.Forms.Block;
 using Hidepass.Logic;
 using Hidepass.Logic.FileOperations;
 using Hidepass.Logic.MVC;
 using Hidepass.Logic.MVC.Block;
-using Hidepass.Logic.MVC.Cell;
 using Hidepass.ObjectTemplates;
 using File = System.IO.File;
 
@@ -11,81 +11,53 @@ namespace Hidepass
 {
     public partial class Main : Form
     {
-        public static readonly string GlobalPathToDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Hidepass";
-        public static readonly string GlobalPathToFileMetadata = GlobalPathToDir + @"\blockmetadata.json";
+        public static readonly string GPathToDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Hidepass";
+        public static readonly string GPathToFileMetadata = GPathToDir + @"\blockmetadata.json";
+
+        public static ListBox GListBlocks;
+        public static ListBox GListCells;
 
         public Main()
         {
-            Initialization.ComponentsCheck(GlobalPathToDir, GlobalPathToFileMetadata);
+            Initialization.ComponentsCheck(GPathToDir, GPathToFileMetadata);
             InitializeComponent();
-            if (File.ReadAllText(GlobalPathToFileMetadata) != "")
+
+            GListBlocks = ListBlocks;
+            GListCells = ListCells;
+
+            Initialization.InitDisplay(GPathToFileMetadata);
+        }
+
+        private void ListBlocks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ViewPassword.DisplayLabelDescription(BlockDescription, ListBlocks.SelectedIndex);
+        }
+
+        private void ButtonCreateBlock_Click(object sender, EventArgs e)
+        {
+            CreateBlock createBlock = new();
+
+            createBlock.Show();
+        }
+
+        private void ButtonChangeBlock_Click(object sender, EventArgs e)
+        {
+            if (ListBlocks.SelectedIndex >= 0)
             {
-                ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
-                ViewPassword.DisplayCells(listCells, JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[0].PathToFile);
+                ChangeBlock changeBlock = new(ListBlocks.SelectedIndex);
+
+                changeBlock.Show();
             }
         }
 
-        private void testCreateBlockButton_Click(object sender, EventArgs e)
+        private void ButtonDeleteBlock_Click(object sender, EventArgs e)
         {
-            string pathToFile = @$"{GlobalPathToDir}\{testNameInput.Text}.json";
+            int index = ListBlocks.SelectedIndex;
 
-            ControllerBlock.ControlCreateBlock(testNameInput.Text, testDesInput.Text, pathToFile);
+            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
-            ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
-        }
-
-        private void testCreateCellButton_Click(object sender, EventArgs e)
-        {
-            int selectIndex = listBlocks.SelectedIndex;
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[selectIndex].PathToFile;
-
-            ControllerCell.ControlCreateCell(inputName.Text, inputDesc.Text, inputLogin.Text, inputPassword.Text, path);
-
-            ViewPassword.DisplayCells(listCells, path);
-        }
-
-        private void buttonBlockDelete_Click(object sender, EventArgs e)
-        {
-            int selectIndex = listBlocks.SelectedIndex;
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[selectIndex].PathToFile;
-
-            ControllerBlock.ControllerDeleteBlock(path, selectIndex);
-
-            ViewPassword.DisplayBlocks(listBlocks, GlobalPathToFileMetadata);
-        }
-
-        private void buttonDeleteCell_Click(object sender, EventArgs e)
-        {
-            int selectedIndex = listCells.SelectedIndex;
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[selectedIndex].PathToFile;
-
-            ControllerCell.ControlerDeleteCell(path, selectedIndex);
-
-            ViewPassword.DisplayCells(listCells, path);
-        }
-
-        private void buttonBlockChange_Click(object sender, EventArgs e)
-        {
-            int selectedIndex = listBlocks.SelectedIndex;
-
-            string newName = "newName";
-            string newDescription = "newDescription";
-
-            ControllerBlock.ControllerChangeBlock(selectedIndex, newName, newDescription);
-        }
-
-        private void buttonChangeCell_Click(object sender, EventArgs e)
-        {
-            int selectedIndex = listCells.SelectedIndex;
-
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GlobalPathToFileMetadata)).Blocks[selectedIndex].PathToFile;
-
-            string newName = "newName";
-            string newDescription = "newDescription";
-            string newLogin = "newLogin";
-            string newPassword = "newPassword";
-
-            ControllerCell.ControllerChangeCell(path, selectedIndex, newName, newDescription, newLogin, newPassword);
+            ControllerBlock.ControllerDeleteBlock(path, index);
+            ViewPassword.DisplayLabelDescription(BlockDescription, -1);
         }
     }
 }

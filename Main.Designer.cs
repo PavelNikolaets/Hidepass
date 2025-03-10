@@ -28,203 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            testCreateBlockButton = new Button();
-            testCreateCellButton = new Button();
-            testNameInput = new TextBox();
-            testDesInput = new TextBox();
-            inputLogin = new TextBox();
-            inputPassword = new TextBox();
-            inputDesc = new TextBox();
-            inputName = new TextBox();
-            listCells = new ListBox();
-            listBlocks = new ListBox();
-            buttonBlockDelete = new Button();
-            buttonBlockChange = new Button();
-            buttonDeleteCell = new Button();
-            buttonChangeCell = new Button();
+            ListBlocks = new ListBox();
+            ListCells = new ListBox();
+            ButtonCreateBlock = new Button();
+            ButtonChangeBlock = new Button();
+            ButtonDeleteBlock = new Button();
+            ButtonCreateCell = new Button();
+            ButtonChangeCell = new Button();
+            ButtonDeleteCell = new Button();
+            BlockDescription = new Label();
             SuspendLayout();
             // 
-            // testCreateBlockButton
+            // ListBlocks
             // 
-            testCreateBlockButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            testCreateBlockButton.Cursor = Cursors.Hand;
-            testCreateBlockButton.Location = new Point(12, 383);
-            testCreateBlockButton.Name = "testCreateBlockButton";
-            testCreateBlockButton.Size = new Size(233, 55);
-            testCreateBlockButton.TabIndex = 0;
-            testCreateBlockButton.Text = "Создать блок";
-            testCreateBlockButton.UseVisualStyleBackColor = true;
-            testCreateBlockButton.Click += testCreateBlockButton_Click;
+            ListBlocks.FormattingEnabled = true;
+            ListBlocks.HorizontalScrollbar = true;
+            ListBlocks.ItemHeight = 15;
+            ListBlocks.Location = new Point(12, 12);
+            ListBlocks.Name = "ListBlocks";
+            ListBlocks.Size = new Size(273, 289);
+            ListBlocks.TabIndex = 0;
+            ListBlocks.SelectedIndexChanged += ListBlocks_SelectedIndexChanged;
             // 
-            // testCreateCellButton
+            // ListCells
             // 
-            testCreateCellButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            testCreateCellButton.Cursor = Cursors.Hand;
-            testCreateCellButton.Location = new Point(555, 383);
-            testCreateCellButton.Name = "testCreateCellButton";
-            testCreateCellButton.Size = new Size(233, 55);
-            testCreateCellButton.TabIndex = 1;
-            testCreateCellButton.Text = "Создать ячейку";
-            testCreateCellButton.UseVisualStyleBackColor = true;
-            testCreateCellButton.Click += testCreateCellButton_Click;
+            ListCells.FormattingEnabled = true;
+            ListCells.HorizontalScrollbar = true;
+            ListCells.ItemHeight = 15;
+            ListCells.Location = new Point(291, 12);
+            ListCells.Name = "ListCells";
+            ListCells.Size = new Size(497, 379);
+            ListCells.TabIndex = 1;
             // 
-            // testNameInput
+            // ButtonCreateBlock
             // 
-            testNameInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            testNameInput.Location = new Point(12, 279);
-            testNameInput.Name = "testNameInput";
-            testNameInput.PlaceholderText = "Название";
-            testNameInput.Size = new Size(233, 23);
-            testNameInput.TabIndex = 2;
+            ButtonCreateBlock.Location = new Point(12, 397);
+            ButtonCreateBlock.Name = "ButtonCreateBlock";
+            ButtonCreateBlock.Size = new Size(87, 41);
+            ButtonCreateBlock.TabIndex = 2;
+            ButtonCreateBlock.Text = "Создать блок";
+            ButtonCreateBlock.UseVisualStyleBackColor = true;
+            ButtonCreateBlock.Click += ButtonCreateBlock_Click;
             // 
-            // testDesInput
+            // ButtonChangeBlock
             // 
-            testDesInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            testDesInput.Location = new Point(12, 308);
-            testDesInput.Multiline = true;
-            testDesInput.Name = "testDesInput";
-            testDesInput.PlaceholderText = "Описание";
-            testDesInput.Size = new Size(233, 69);
-            testDesInput.TabIndex = 3;
+            ButtonChangeBlock.Location = new Point(105, 397);
+            ButtonChangeBlock.Name = "ButtonChangeBlock";
+            ButtonChangeBlock.Size = new Size(87, 41);
+            ButtonChangeBlock.TabIndex = 3;
+            ButtonChangeBlock.Text = "Изменить блок";
+            ButtonChangeBlock.UseVisualStyleBackColor = true;
+            ButtonChangeBlock.Click += ButtonChangeBlock_Click;
             // 
-            // inputLogin
+            // ButtonDeleteBlock
             // 
-            inputLogin.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputLogin.Location = new Point(555, 325);
-            inputLogin.Name = "inputLogin";
-            inputLogin.PlaceholderText = "Логин";
-            inputLogin.Size = new Size(233, 23);
-            inputLogin.TabIndex = 4;
+            ButtonDeleteBlock.Location = new Point(198, 397);
+            ButtonDeleteBlock.Name = "ButtonDeleteBlock";
+            ButtonDeleteBlock.Size = new Size(87, 41);
+            ButtonDeleteBlock.TabIndex = 4;
+            ButtonDeleteBlock.Text = "Удалить блок";
+            ButtonDeleteBlock.UseVisualStyleBackColor = true;
+            ButtonDeleteBlock.Click += ButtonDeleteBlock_Click;
             // 
-            // inputPassword
+            // ButtonCreateCell
             // 
-            inputPassword.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputPassword.Location = new Point(555, 354);
-            inputPassword.Name = "inputPassword";
-            inputPassword.PlaceholderText = "Пароль";
-            inputPassword.Size = new Size(233, 23);
-            inputPassword.TabIndex = 5;
+            ButtonCreateCell.Location = new Point(515, 397);
+            ButtonCreateCell.Name = "ButtonCreateCell";
+            ButtonCreateCell.Size = new Size(87, 41);
+            ButtonCreateCell.TabIndex = 5;
+            ButtonCreateCell.Text = "Создать ячейку";
+            ButtonCreateCell.UseVisualStyleBackColor = true;
             // 
-            // inputDesc
+            // ButtonChangeCell
             // 
-            inputDesc.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputDesc.Location = new Point(555, 250);
-            inputDesc.Multiline = true;
-            inputDesc.Name = "inputDesc";
-            inputDesc.PlaceholderText = "Описание";
-            inputDesc.Size = new Size(233, 69);
-            inputDesc.TabIndex = 6;
+            ButtonChangeCell.Location = new Point(608, 397);
+            ButtonChangeCell.Name = "ButtonChangeCell";
+            ButtonChangeCell.Size = new Size(87, 41);
+            ButtonChangeCell.TabIndex = 6;
+            ButtonChangeCell.Text = "Изменить ячейку";
+            ButtonChangeCell.UseVisualStyleBackColor = true;
             // 
-            // inputName
+            // ButtonDeleteCell
             // 
-            inputName.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inputName.Location = new Point(555, 221);
-            inputName.Name = "inputName";
-            inputName.PlaceholderText = "Название";
-            inputName.Size = new Size(233, 23);
-            inputName.TabIndex = 7;
+            ButtonDeleteCell.Location = new Point(701, 397);
+            ButtonDeleteCell.Name = "ButtonDeleteCell";
+            ButtonDeleteCell.Size = new Size(87, 41);
+            ButtonDeleteCell.TabIndex = 7;
+            ButtonDeleteCell.Text = "Удалить ячейку";
+            ButtonDeleteCell.UseVisualStyleBackColor = true;
             // 
-            // listCells
+            // BlockDescription
             // 
-            listCells.Anchor = AnchorStyles.Bottom;
-            listCells.ItemHeight = 15;
-            listCells.Location = new Point(251, 222);
-            listCells.Name = "listCells";
-            listCells.Size = new Size(298, 214);
-            listCells.TabIndex = 9;
-            // 
-            // listBlocks
-            // 
-            listBlocks.Anchor = AnchorStyles.Top;
-            listBlocks.FormattingEnabled = true;
-            listBlocks.ItemHeight = 15;
-            listBlocks.Location = new Point(251, 12);
-            listBlocks.Name = "listBlocks";
-            listBlocks.Size = new Size(298, 199);
-            listBlocks.TabIndex = 10;
-            // 
-            // buttonBlockDelete
-            // 
-            buttonBlockDelete.Location = new Point(12, 12);
-            buttonBlockDelete.Name = "buttonBlockDelete";
-            buttonBlockDelete.Size = new Size(233, 53);
-            buttonBlockDelete.TabIndex = 11;
-            buttonBlockDelete.Text = "Удалить блок";
-            buttonBlockDelete.UseVisualStyleBackColor = true;
-            buttonBlockDelete.Click += buttonBlockDelete_Click;
-            // 
-            // buttonBlockChange
-            // 
-            buttonBlockChange.Location = new Point(12, 71);
-            buttonBlockChange.Name = "buttonBlockChange";
-            buttonBlockChange.Size = new Size(233, 53);
-            buttonBlockChange.TabIndex = 12;
-            buttonBlockChange.Text = "Изменить блок";
-            buttonBlockChange.UseVisualStyleBackColor = true;
-            buttonBlockChange.Click += buttonBlockChange_Click;
-            // 
-            // buttonDeleteCell
-            // 
-            buttonDeleteCell.Anchor = AnchorStyles.Left;
-            buttonDeleteCell.Location = new Point(12, 158);
-            buttonDeleteCell.Name = "buttonDeleteCell";
-            buttonDeleteCell.Size = new Size(233, 53);
-            buttonDeleteCell.TabIndex = 13;
-            buttonDeleteCell.Text = "Удалить ячейку";
-            buttonDeleteCell.UseVisualStyleBackColor = true;
-            buttonDeleteCell.Click += buttonDeleteCell_Click;
-            // 
-            // buttonChangeCell
-            // 
-            buttonChangeCell.Anchor = AnchorStyles.Left;
-            buttonChangeCell.Location = new Point(12, 220);
-            buttonChangeCell.Name = "buttonChangeCell";
-            buttonChangeCell.Size = new Size(233, 53);
-            buttonChangeCell.TabIndex = 14;
-            buttonChangeCell.Text = "Изменить ячейку";
-            buttonChangeCell.UseVisualStyleBackColor = true;
-            buttonChangeCell.Click += buttonChangeCell_Click;
+            BlockDescription.BorderStyle = BorderStyle.Fixed3D;
+            BlockDescription.Location = new Point(12, 304);
+            BlockDescription.Name = "BlockDescription";
+            BlockDescription.Size = new Size(273, 87);
+            BlockDescription.TabIndex = 8;
+            BlockDescription.Text = "Описание:";
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonChangeCell);
-            Controls.Add(buttonDeleteCell);
-            Controls.Add(buttonBlockChange);
-            Controls.Add(buttonBlockDelete);
-            Controls.Add(listBlocks);
-            Controls.Add(listCells);
-            Controls.Add(inputName);
-            Controls.Add(inputDesc);
-            Controls.Add(inputPassword);
-            Controls.Add(inputLogin);
-            Controls.Add(testDesInput);
-            Controls.Add(testNameInput);
-            Controls.Add(testCreateCellButton);
-            Controls.Add(testCreateBlockButton);
+            Controls.Add(BlockDescription);
+            Controls.Add(ButtonDeleteCell);
+            Controls.Add(ButtonChangeCell);
+            Controls.Add(ButtonCreateCell);
+            Controls.Add(ButtonDeleteBlock);
+            Controls.Add(ButtonChangeBlock);
+            Controls.Add(ButtonCreateBlock);
+            Controls.Add(ListCells);
+            Controls.Add(ListBlocks);
             Name = "Main";
             Text = "Passhide";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button testCreateBlockButton;
-        private Button testCreateCellButton;
-        private TextBox testNameInput;
-        private TextBox testDesInput;
-        private TextBox inputLogin;
-        private TextBox inputPassword;
-        private TextBox inputDesc;
-        private TextBox inputName;
-        private ListBox listCells;
-        private ListBox listBlocks;
-        private Button buttonBlockDelete;
-        private Button buttonBlockChange;
-        private Button buttonDeleteCell;
-        private Button buttonChangeCell;
+        private ListBox ListBlocks;
+        private ListBox ListCells;
+        private Button ButtonCreateBlock;
+        private Button ButtonChangeBlock;
+        private Button ButtonDeleteBlock;
+        private Button ButtonCreateCell;
+        private Button ButtonChangeCell;
+        private Button ButtonDeleteCell;
+        private Label BlockDescription;
     }
 }

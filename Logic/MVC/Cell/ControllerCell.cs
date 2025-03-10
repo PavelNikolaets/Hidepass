@@ -3,12 +3,19 @@ namespace Hidepass.Logic.MVC.Cell
 {
     internal class ControllerCell
     {
-        public static void ControlCreateCell(string name, string description, string login, string password, string path)
+        public static void ControllerCreateCell(string name, string description, string login, string password, string pathToBlock)
         {
-            string[] paramAll = [name, login, password, path];
+            string[] paramAll = [name, login, password, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
-                ModelCell.ModelCreateCell(name, description, login, password, path);
+                if (File.Exists(pathToBlock) == false)
+                {
+                    ModelCell.ModelCreateCell(name, description, login, password, pathToBlock);
+                }
+                else
+                {
+                    MessageBox.Show("Такой блок уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

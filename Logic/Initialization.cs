@@ -1,4 +1,5 @@
 ﻿
+using Hidepass.Logic.MVC;
 using File = System.IO.File;
 using Directory = System.IO.Directory;
 
@@ -16,6 +17,14 @@ namespace Hidepass.Logic
             if (File.Exists(fileMetadata) == false)
             {
                 File.Create(fileMetadata).Close();
+            }
+        }
+
+        public static void InitDisplay(string metadata)
+        {
+            if (File.ReadAllText(metadata) != "")
+            {
+                ViewPassword.DisplayBlocks(Main.GListBlocks, metadata);
             }
         }
     }

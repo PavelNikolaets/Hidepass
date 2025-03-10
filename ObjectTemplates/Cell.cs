@@ -13,6 +13,6 @@ namespace Hidepass.ObjectTemplates
         public string Login { get; set; } = Login;
         public string Password { get; set; } = Password;
         public string DateCreate { get; } = DateTime.Now.ToString("g");
-        public string DateUpdate { get; set; }
+        public string DateUpdate { get; set; } = "";
     }
 }

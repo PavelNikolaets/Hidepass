@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="CustomControl\Block\StripInfoBlock.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Forms\Block\ChangeBlock.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CustomControl\Cell\StripInfoCell.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Forms\Block\CreateBlock.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CustomControl\ListInfo.cs">
-      <SubType>UserControl</SubType>
+    <Compile Update="Forms\Cell\ChangeCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Cell\CreateBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Cell\ViewCell.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>

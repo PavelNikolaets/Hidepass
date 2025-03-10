@@ -13,14 +13,8 @@ namespace Hidepass.Logic.FileOperations
             Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 
-        public static string ToJson<T>(T inputObj)
-        {
-            return JsonSerializer.Serialize(inputObj, options);
-        }
+        public static string ToJson<T>(T inputObj) => JsonSerializer.Serialize(inputObj, options);
 
-        public static T ToObject<T>(string json)
-        {
-            return JsonSerializer.Deserialize<T>(json);
-        }
+        public static T ToObject<T>(string json) => JsonSerializer.Deserialize<T>(json);
     }
 }

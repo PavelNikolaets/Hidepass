@@ -16,22 +16,22 @@ namespace Hidepass.Logic.MVC.Cell
 
             File.WriteAllText(path, JsonService.ToJson(obj));
 
-            MessageBox.Show("Ячейка создана!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ViewPassword.DisplayCells(Main.GListCells, path);
         }
 
-        public static void ModelDeleteCell(string pathToBlock, int index)
+        public static void ModelDeleteCell(string path, int index)
         {
-            RootCell obj = JsonService.ToObject<RootCell>(File.ReadAllText(pathToBlock));
+            RootCell obj = JsonService.ToObject<RootCell>(File.ReadAllText(path));
             obj.Cells.RemoveAt(index);
 
-            File.WriteAllText(pathToBlock, JsonService.ToJson(obj));
+            File.WriteAllText(path, JsonService.ToJson(obj));
 
-            MessageBox.Show("Ячейка удалена!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ViewPassword.DisplayCells(Main.GListCells, path);
         }
 
-        public static void ModelChangeCell(string pathToBlock, int index, string name, string description, string login, string password)
+        public static void ModelChangeCell(string path, int index, string name, string description, string login, string password)
         {
-            RootCell obj = JsonService.ToObject<RootCell>(File.ReadAllText(pathToBlock));
+            RootCell obj = JsonService.ToObject<RootCell>(File.ReadAllText(path));
 
             obj.Cells[index].Name = name;
             obj.Cells[index].Description = description;
@@ -39,9 +39,9 @@ namespace Hidepass.Logic.MVC.Cell
             obj.Cells[index].Password = password;
             obj.Cells[index].DateUpdate = DateTime.Now.ToString("g");
 
-            File.WriteAllText(pathToBlock, JsonService.ToJson(obj));
+            File.WriteAllText(path, JsonService.ToJson(obj));
 
-            MessageBox.Show("Ячейка удалена!", "Выполнено!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ViewPassword.DisplayCells(Main.GListCells, path);
         }
     }
 }
