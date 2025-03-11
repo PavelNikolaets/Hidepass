@@ -3,9 +3,9 @@ using Hidepass.Logic.MVC.Block;
 
 namespace Hidepass.Forms.Block
 {
-    public partial class CreateBlock : Form
+    public partial class FCreateBlock : Form
     {
-        public CreateBlock()
+        public FCreateBlock()
         {
             InitializeComponent();
         }

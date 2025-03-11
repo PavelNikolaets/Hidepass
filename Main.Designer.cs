@@ -59,6 +59,7 @@
             ListCells.Name = "ListCells";
             ListCells.Size = new Size(497, 379);
             ListCells.TabIndex = 1;
+            ListCells.DoubleClick += ListCells_DoubleClick;
             // 
             // ButtonCreateBlock
             // 
@@ -98,6 +99,7 @@
             ButtonCreateCell.TabIndex = 5;
             ButtonCreateCell.Text = "Создать ячейку";
             ButtonCreateCell.UseVisualStyleBackColor = true;
+            ButtonCreateCell.Click += ButtonCreateCell_Click;
             // 
             // ButtonChangeCell
             // 
@@ -116,6 +118,7 @@
             ButtonDeleteCell.TabIndex = 7;
             ButtonDeleteCell.Text = "Удалить ячейку";
             ButtonDeleteCell.UseVisualStyleBackColor = true;
+            ButtonDeleteCell.Click += ButtonDeleteCell_Click;
             // 
             // BlockDescription
             // 

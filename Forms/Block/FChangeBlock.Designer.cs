@@ -1,6 +1,6 @@
 ﻿namespace Hidepass.Forms.Block
 {
-    partial class CreateBlock
+    partial class FChangeBlock
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             InputName = new TextBox();
             InputDescription = new TextBox();
-            ButtonCreate = new Button();
+            ButtonChange = new Button();
             SuspendLayout();
             // 
             // InputName
@@ -39,7 +39,7 @@
             InputName.Name = "InputName";
             InputName.PlaceholderText = "Нзвание";
             InputName.Size = new Size(222, 23);
-            InputName.TabIndex = 1;
+            InputName.TabIndex = 0;
             // 
             // InputDescription
             // 
@@ -49,28 +49,28 @@
             InputDescription.PlaceholderText = "Описание";
             InputDescription.ScrollBars = ScrollBars.Vertical;
             InputDescription.Size = new Size(222, 125);
-            InputDescription.TabIndex = 2;
+            InputDescription.TabIndex = 1;
             // 
-            // ButtonCreate
+            // ButtonChange
             // 
-            ButtonCreate.Location = new Point(12, 172);
-            ButtonCreate.Name = "ButtonCreate";
-            ButtonCreate.Size = new Size(222, 43);
-            ButtonCreate.TabIndex = 3;
-            ButtonCreate.Text = "Создать";
-            ButtonCreate.UseVisualStyleBackColor = true;
-            ButtonCreate.Click += ButtonCreate_Click;
+            ButtonChange.Location = new Point(12, 172);
+            ButtonChange.Name = "ButtonChange";
+            ButtonChange.Size = new Size(222, 43);
+            ButtonChange.TabIndex = 2;
+            ButtonChange.Text = "Изменить";
+            ButtonChange.UseVisualStyleBackColor = true;
+            ButtonChange.Click += ButtonChange_Click;
             // 
-            // CreateBlock
+            // ChangeBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(246, 223);
-            Controls.Add(ButtonCreate);
+            Controls.Add(ButtonChange);
             Controls.Add(InputDescription);
             Controls.Add(InputName);
-            Name = "CreateBlock";
-            Text = "Создание блока";
+            Name = "ChangeBlock";
+            Text = "Изменение блока";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -79,6 +79,6 @@
 
         private TextBox InputName;
         private TextBox InputDescription;
-        private Button ButtonCreate;
+        private Button ButtonChange;
     }
 }

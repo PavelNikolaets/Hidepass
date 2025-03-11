@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hidepass.Forms.Cell
 {
-    public partial class ChangeCell : Form
+    public partial class FChangeCell : Form
     {
-        public ChangeCell()
+        public FChangeCell()
         {
             InitializeComponent();
         }

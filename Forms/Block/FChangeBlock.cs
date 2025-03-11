@@ -5,12 +5,12 @@ using Hidepass.ObjectTemplates;
 
 namespace Hidepass.Forms.Block
 {
-    public partial class ChangeBlock : Form
+    public partial class FChangeBlock : Form
     {
         public int Index {  get; set; }
 
 
-        public ChangeBlock(int index)
+        public FChangeBlock(int index)
         {
             InitializeComponent();
             Index = index;

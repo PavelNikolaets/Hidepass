@@ -8,14 +8,7 @@ namespace Hidepass.Logic.MVC.Cell
             string[] paramAll = [name, login, password, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
-                if (File.Exists(pathToBlock) == false)
-                {
-                    ModelCell.ModelCreateCell(name, description, login, password, pathToBlock);
-                }
-                else
-                {
-                    MessageBox.Show("Такой блок уже существует!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                ModelCell.ModelCreateCell(name, description, login, password, pathToBlock);
             }
             else
             {
