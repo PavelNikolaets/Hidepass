@@ -1,5 +1,4 @@
 ﻿
-using Hidepass.Logic.FileOperations;
 using Hidepass.Logic.MVC.Block;
 using Hidepass.ObjectTemplates;
 
@@ -7,17 +6,18 @@ namespace Hidepass.Forms.Block
 {
     public partial class FChangeBlock : Form
     {
-        public int Index {  get; set; }
+        public BlockObject Obj { get; set; }
+        public int Index { get; set; }
 
-
-        public FChangeBlock(int index)
+        public FChangeBlock(BlockObject obj, int index)
         {
             InitializeComponent();
+
+            Obj = obj;
             Index = index;
 
-            RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata));
-            InputName.Text = obj.Blocks[index].Name;
-            InputDescription.Text = obj.Blocks[index].Description;
+            InputName.Text = obj.Name;
+            InputDescription.Text = obj.Description;
 
         }
 

@@ -64,7 +64,6 @@
             // 
             InputPassword.Location = new Point(12, 201);
             InputPassword.Name = "InputPassword";
-            InputPassword.PasswordChar = '*';
             InputPassword.PlaceholderText = "Пароль";
             InputPassword.Size = new Size(222, 23);
             InputPassword.TabIndex = 5;

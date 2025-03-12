@@ -1,4 +1,5 @@
 ﻿
+using Hidepass.Logic.OperationCryptography;
 using Hidepass.ObjectTemplates;
 using Hidepass.Logic.FileOperations;
 

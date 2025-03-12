@@ -6,6 +6,7 @@ using Hidepass.Logic.FileOperations;
 using Hidepass.Logic.MVC;
 using Hidepass.Logic.MVC.Block;
 using Hidepass.Logic.MVC.Cell;
+using Hidepass.Logic.OperationCryptography;
 using Hidepass.ObjectTemplates;
 using System;
 using File = System.IO.File;
@@ -20,6 +21,8 @@ namespace Hidepass
         public static ListBox GListBlocks;
         public static ListBox GListCells;
 
+        private static int SelectedBlockIndex = 0;
+
         public Main()
         {
             Initialization.ComponentsCheck(GPathToDir, GPathToFileMetadata);
@@ -33,43 +36,39 @@ namespace Hidepass
 
         private void ListBlocks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = ListBlocks.SelectedIndex;
+            SelectedBlockIndex = ListBlocks.SelectedIndex;
 
-            if (index >= 0)
+            if (SelectedBlockIndex >= 0)
             {
-                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
+                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
                 ViewPassword.DisplayCells(ListCells, path);
             }
 
-            ViewPassword.DisplayLabelDescription(BlockDescription, index);
+            ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex);
         }
 
         private void ButtonCreateBlock_Click(object sender, EventArgs e)
         {
-            FCreateBlock createBlock = new();
-
-            createBlock.Show();
+            FCreateBlock fCreateBlock = new();
+            fCreateBlock.Show();
         }
 
         private void ButtonChangeBlock_Click(object sender, EventArgs e)
         {
-            int index = ListBlocks.SelectedIndex;
-
-            if (index >= 0)
+            if (SelectedBlockIndex >= 0)
             {
-                FChangeBlock changeBlock = new(ListBlocks.SelectedIndex);
+                BlockObject obj = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex];
 
-                changeBlock.Show();
+                FChangeBlock fChangeBlock = new(obj, SelectedBlockIndex);
+                fChangeBlock.Show();
             }
         }
 
         private void ButtonDeleteBlock_Click(object sender, EventArgs e)
         {
-            int index = ListBlocks.SelectedIndex;
+            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
-
-            ControllerBlock.ControllerDeleteBlock(path, index);
+            ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex);
             ViewPassword.DisplayLabelDescription(BlockDescription, -1);
         }
 
@@ -82,7 +81,6 @@ namespace Hidepass
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
                 FCreateCell createCell = new(path);
-
                 createCell.Show();
             }
         }
@@ -99,15 +97,49 @@ namespace Hidepass
             }
         }
 
-        private void ListCells_DoubleClick(object sender, EventArgs e)
+        //private void ListCells_DoubleClick(object sender, EventArgs e)
+        //{
+        //    int index = ListCells.SelectedIndex;
+
+        //    if (index >= 0)
+        //    {
+        //        string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+        //        CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
+
+        //        FViewCell fViewCell = new(obj);
+        //        fViewCell.Show();
+        //    }
+        //}
+
+        private void ListCells_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = ListCells.IndexFromPoint(e.Location);
+
+            if (index >= 0)
+            {
+                ListCells.SelectedIndex = index;
+
+                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+                CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
+
+                FViewCell fViewCell = new(obj);
+                fViewCell.Show();
+            }
+        }
+
+        private void ButtonChangeCell_Click(object sender, EventArgs e)
         {
             int index = ListCells.SelectedIndex;
 
             if (index >= 0)
             {
-                FViewCell fViewCell = new();
-                fViewCell.Show();
+                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+                CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
+
+                FChangeCell fChangeCell = new(obj, path, index);
+                fChangeCell.Show();
+
             }
-        } // хуйн€ с вариантом двойного нажати€, при нажатии в любую часть листа и выбраном элементе открываетс€ просмтор €чейки, нужно что то другое
+        }
     }
 }

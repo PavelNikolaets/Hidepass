@@ -59,7 +59,7 @@
             ListCells.Name = "ListCells";
             ListCells.Size = new Size(497, 379);
             ListCells.TabIndex = 1;
-            ListCells.DoubleClick += ListCells_DoubleClick;
+            ListCells.MouseDoubleClick += ListCells_MouseDoubleClick;
             // 
             // ButtonCreateBlock
             // 
@@ -109,6 +109,7 @@
             ButtonChangeCell.TabIndex = 6;
             ButtonChangeCell.Text = "Изменить ячейку";
             ButtonChangeCell.UseVisualStyleBackColor = true;
+            ButtonChangeCell.Click += ButtonChangeCell_Click;
             // 
             // ButtonDeleteCell
             // 
@@ -133,6 +134,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(800, 450);
             Controls.Add(BlockDescription);
             Controls.Add(ButtonDeleteCell);
@@ -144,6 +146,7 @@
             Controls.Add(ListCells);
             Controls.Add(ListBlocks);
             Name = "Main";
+            Padding = new Padding(5);
             Text = "Passhide";
             ResumeLayout(false);
         }

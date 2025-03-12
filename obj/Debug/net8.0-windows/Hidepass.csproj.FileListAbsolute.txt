@@ -20,3 +20,4 @@ C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Blo
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FChangeCell.resources
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FCreateCell.resources
 C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FViewCell.resources
+C:\Users\pavel\source\repos\Hidepass\obj\Debug\net8.0-windows\Hidepass.Properties.Resources.resources

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            InputPassword = new TextBox();
+            InputLogin = new TextBox();
+            InputDescription = new TextBox();
+            InputName = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -43,40 +43,40 @@
             button1.TabIndex = 11;
             button1.Text = "Изменить";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox4
+            // InputPassword
             // 
-            textBox4.Location = new Point(12, 201);
-            textBox4.Name = "textBox4";
-            textBox4.PasswordChar = '*';
-            textBox4.PlaceholderText = "Пароль";
-            textBox4.Size = new Size(222, 23);
-            textBox4.TabIndex = 10;
+            InputPassword.Location = new Point(12, 201);
+            InputPassword.Name = "InputPassword";
+            InputPassword.PlaceholderText = "Пароль";
+            InputPassword.Size = new Size(222, 23);
+            InputPassword.TabIndex = 10;
             // 
-            // textBox3
+            // InputLogin
             // 
-            textBox3.Location = new Point(12, 172);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Логин";
-            textBox3.Size = new Size(222, 23);
-            textBox3.TabIndex = 9;
+            InputLogin.Location = new Point(12, 172);
+            InputLogin.Name = "InputLogin";
+            InputLogin.PlaceholderText = "Логин";
+            InputLogin.Size = new Size(222, 23);
+            InputLogin.TabIndex = 9;
             // 
-            // textBox2
+            // InputDescription
             // 
-            textBox2.Location = new Point(12, 41);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Описание";
-            textBox2.Size = new Size(222, 125);
-            textBox2.TabIndex = 8;
+            InputDescription.Location = new Point(12, 41);
+            InputDescription.Multiline = true;
+            InputDescription.Name = "InputDescription";
+            InputDescription.PlaceholderText = "Описание";
+            InputDescription.Size = new Size(222, 125);
+            InputDescription.TabIndex = 8;
             // 
-            // textBox1
+            // InputName
             // 
-            textBox1.Location = new Point(12, 12);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Нзвание";
-            textBox1.Size = new Size(222, 23);
-            textBox1.TabIndex = 7;
+            InputName.Location = new Point(12, 12);
+            InputName.Name = "InputName";
+            InputName.PlaceholderText = "Нзвание";
+            InputName.Size = new Size(222, 23);
+            InputName.TabIndex = 7;
             // 
             // FChangeCell
             // 
@@ -84,10 +84,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(246, 281);
             Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(InputPassword);
+            Controls.Add(InputLogin);
+            Controls.Add(InputDescription);
+            Controls.Add(InputName);
             Name = "FChangeCell";
             Text = "Изменение ячейки";
             ResumeLayout(false);
@@ -97,9 +97,9 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox InputPassword;
+        private TextBox InputLogin;
+        private TextBox InputDescription;
+        private TextBox InputName;
     }
 }

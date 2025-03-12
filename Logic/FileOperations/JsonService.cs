@@ -10,6 +10,7 @@ namespace Hidepass.Logic.FileOperations
         {
             IncludeFields = true,
             WriteIndented = true,
+            PropertyNameCaseInsensitive = true,
             Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 

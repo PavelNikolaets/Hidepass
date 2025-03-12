@@ -11,7 +11,10 @@ namespace Hidepass.Logic.MVC.Block
             string[] paramAll = [name, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
-                ModelBlock.ModelCreateBlock(name, description, pathToBlock);
+                if (name.Contains('\\') == false)
+                {
+                    ModelBlock.ModelCreateBlock(name, description, pathToBlock);
+                }
             }
             else
             {

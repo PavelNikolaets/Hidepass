@@ -1,4 +1,5 @@
 ﻿
+using Hidepass.Logic.OperationCryptography;
 using Hidepass.Logic.FileOperations;
 using Hidepass.ObjectTemplates;
 using File = System.IO.File;
@@ -28,6 +29,7 @@ namespace Hidepass.Logic.MVC.Block
             File.WriteAllText(Main.GPathToFileMetadata, JsonService.ToJson(obj));
             File.Delete(pathToBlock);
 
+            Main.GListCells.Items.Clear();
             ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata);
         }
 
