@@ -61,15 +61,16 @@
             ButtonChange.UseVisualStyleBackColor = true;
             ButtonChange.Click += ButtonChange_Click;
             // 
-            // ChangeBlock
+            // FChangeBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(246, 223);
             Controls.Add(ButtonChange);
             Controls.Add(InputDescription);
             Controls.Add(InputName);
-            Name = "ChangeBlock";
+            Name = "FChangeBlock";
             Text = "Изменение блока";
             ResumeLayout(false);
             PerformLayout();

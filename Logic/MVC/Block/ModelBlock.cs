@@ -15,7 +15,7 @@ namespace Hidepass.Logic.MVC.Block
 
             obj.Blocks.Add(new(name, description, pathToBlock));
 
-            File.WriteAllText(pathToBlock, JsonService.ToJson<RootCell>(new()));
+            File.WriteAllText(pathToBlock, CryptographyModule.Encrypt(JsonService.ToJson<RootCell>(new())));
             File.WriteAllText(Main.GPathToFileMetadata, JsonService.ToJson(obj));
 
             ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata);

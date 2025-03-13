@@ -21,7 +21,9 @@ namespace Hidepass.Logic.MVC
 
         public static void DisplayCells(ListBox listCells, string path)
         {
-            RootCell cells = JsonService.ToObject<RootCell>(File.ReadAllText(path));
+            string encryptedJson = File.ReadAllText(path);
+            string json = CryptographyModule.Decrypt(encryptedJson);
+            RootCell cells = JsonService.ToObject<RootCell>(json);
 
             listCells.Items.Clear();
 

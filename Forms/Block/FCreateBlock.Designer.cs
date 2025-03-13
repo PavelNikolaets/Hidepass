@@ -61,15 +61,16 @@
             ButtonCreate.UseVisualStyleBackColor = true;
             ButtonCreate.Click += ButtonCreate_Click;
             // 
-            // CreateBlock
+            // FCreateBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(246, 223);
             Controls.Add(ButtonCreate);
             Controls.Add(InputDescription);
             Controls.Add(InputName);
-            Name = "CreateBlock";
+            Name = "FCreateBlock";
             Text = "Создание блока";
             ResumeLayout(false);
             PerformLayout();

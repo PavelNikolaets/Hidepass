@@ -82,6 +82,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(246, 281);
             Controls.Add(ButtonCreate);
             Controls.Add(InputPassword);

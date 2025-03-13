@@ -36,10 +36,16 @@ namespace Hidepass
 
         private void ListBlocks_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
             SelectedBlockIndex = ListBlocks.SelectedIndex;
 
             if (SelectedBlockIndex >= 0)
             {
+                //string encryptedMeta = File.ReadAllText(GPathToFileMetadata);
+                //string jsonMeta = CryptographyModule.Decrypt(encryptedMeta);
+                //RootBlock root = JsonService.ToObject<RootBlock>(jsonMeta);
+
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
                 ViewPassword.DisplayCells(ListCells, path);
             }
@@ -120,7 +126,13 @@ namespace Hidepass
                 ListCells.SelectedIndex = index;
 
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
-                CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
+
+                string encryptedCellData = File.ReadAllText(path);
+                RootCell cellData = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData));
+
+                CellObject obj = cellData.Cells[index];
+
+                //CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
 
                 FViewCell fViewCell = new(obj);
                 fViewCell.Show();
@@ -134,7 +146,10 @@ namespace Hidepass
             if (index >= 0)
             {
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
-                CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
+
+                string encryptedCellData = File.ReadAllText(path);
+                RootCell rootCell = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData));
+                CellObject obj = rootCell.Cells[index];
 
                 FChangeCell fChangeCell = new(obj, path, index);
                 fChangeCell.Show();

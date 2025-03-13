@@ -3,47 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\pavel\\source\\repos\\Hidepass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\modelblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\block\\modelblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\cell\\modelcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\cell\\modelcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\operationcryptography\\cryptographymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\operationcryptography\\cryptographymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\fileoperations\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\fileoperations\\jsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\cell\\fviewcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\cell\\fviewcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\viewpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pavel\\Documents\\Hidepass\\\u0422\u0435\u0441\u0442.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\modelblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\block\\modelblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\block\\controllerblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\logic\\mvc\\cell\\modelcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:logic\\mvc\\cell\\modelcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\block\\fchangeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\block\\fchangeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\block\\fcreateblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\block\\fcreateblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\cell\\fchangecell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\cell\\fchangecell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\cell\\fcreatecell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\cell\\fcreatecell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|c:\\users\\pavel\\source\\repos\\hidepass\\forms\\block\\fchangeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D9E21E-2EB7-496C-8A42-8CFD5B720694}|Hidepass.csproj|solutionrelative:forms\\block\\fchangeblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,24 +54,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:59:12.595Z",
+              "WhenOpened": "2025-03-13T21:19:09.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "ViewPassword.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
+              "RelativeDocumentMoniker": "Logic\\MVC\\ViewPassword.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
+              "RelativeToolTip": "Logic\\MVC\\ViewPassword.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:13:40.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "JsonService.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\FileOperations\\JsonService.cs",
               "RelativeDocumentMoniker": "Logic\\FileOperations\\JsonService.cs",
@@ -78,124 +92,111 @@
               "RelativeToolTip": "Logic\\FileOperations\\JsonService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:57:59.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewPassword.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
-              "RelativeDocumentMoniker": "Logic\\MVC\\ViewPassword.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\ViewPassword.cs",
-              "RelativeToolTip": "Logic\\MVC\\ViewPassword.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:55:32.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CryptographyModule.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\OperationCryptography\\CryptographyModule.cs",
-              "RelativeDocumentMoniker": "Logic\\OperationCryptography\\CryptographyModule.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\OperationCryptography\\CryptographyModule.cs",
-              "RelativeToolTip": "Logic\\OperationCryptography\\CryptographyModule.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowBQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:16:35.474Z",
+              "WhenOpened": "2025-03-13T21:04:18.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ModelCell.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ModelCell.cs",
-              "RelativeDocumentMoniker": "Logic\\MVC\\Cell\\ModelCell.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ModelCell.cs",
-              "RelativeToolTip": "Logic\\MVC\\Cell\\ModelCell.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Title": "FViewCell.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FViewCell.cs",
+              "RelativeDocumentMoniker": "Forms\\Cell\\FViewCell.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FViewCell.cs",
+              "RelativeToolTip": "Forms\\Cell\\FViewCell.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:50:48.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ControllerBlock.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ControllerBlock.cs",
-              "RelativeDocumentMoniker": "Logic\\MVC\\Block\\ControllerBlock.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ControllerBlock.cs",
-              "RelativeToolTip": "Logic\\MVC\\Block\\ControllerBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:48:46.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ModelBlock.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
-              "RelativeDocumentMoniker": "Logic\\MVC\\Block\\ModelBlock.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
-              "RelativeToolTip": "Logic\\MVC\\Block\\ModelBlock.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:23:38.346Z",
+              "WhenOpened": "2025-03-13T21:02:15.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "FChangeBlock.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FChangeBlock.cs",
-              "RelativeDocumentMoniker": "Forms\\Block\\FChangeBlock.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FChangeBlock.cs",
-              "RelativeToolTip": "Forms\\Block\\FChangeBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "FCreateCell.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FCreateCell.cs",
+              "RelativeDocumentMoniker": "Forms\\Cell\\FCreateCell.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FCreateCell.cs",
+              "RelativeToolTip": "Forms\\Cell\\FCreateCell.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T19:54:34.88Z",
+              "WhenOpened": "2025-03-13T21:02:12.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "FChangeCell.cs",
               "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FChangeCell.cs",
               "RelativeDocumentMoniker": "Forms\\Cell\\FChangeCell.cs",
               "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Cell\\FChangeCell.cs",
               "RelativeToolTip": "Forms\\Cell\\FChangeCell.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T19:52:27.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
-              "RelativeDocumentMoniker": "Main.cs",
-              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
-              "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAADgv28AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T19:52:10.173Z",
+              "WhenOpened": "2025-03-13T21:02:05.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "\u0422\u0435\u0441\u0442.json",
-              "DocumentMoniker": "C:\\Users\\pavel\\Documents\\Hidepass\\\u0422\u0435\u0441\u0442.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\Documents\\Hidepass\\\u0422\u0435\u0441\u0442.json",
-              "ToolTip": "C:\\Users\\pavel\\Documents\\Hidepass\\\u0422\u0435\u0441\u0442.json",
-              "RelativeToolTip": "..\\..\\..\\Documents\\Hidepass\\\u0422\u0435\u0441\u0442.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-12T21:58:49.735Z",
+              "Title": "FCreateBlock.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FCreateBlock.cs",
+              "RelativeDocumentMoniker": "Forms\\Block\\FCreateBlock.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FCreateBlock.cs",
+              "RelativeToolTip": "Forms\\Block\\FCreateBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:02:01.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FChangeBlock.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FChangeBlock.cs",
+              "RelativeDocumentMoniker": "Forms\\Block\\FChangeBlock.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Forms\\Block\\FChangeBlock.cs",
+              "RelativeToolTip": "Forms\\Block\\FChangeBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T21:01:55.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModelCell.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ModelCell.cs",
+              "RelativeDocumentMoniker": "Logic\\MVC\\Cell\\ModelCell.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Cell\\ModelCell.cs",
+              "RelativeToolTip": "Logic\\MVC\\Cell\\ModelCell.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:59:25.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModelBlock.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
+              "RelativeDocumentMoniker": "Logic\\MVC\\Block\\ModelBlock.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Logic\\MVC\\Block\\ModelBlock.cs",
+              "RelativeToolTip": "Logic\\MVC\\Block\\ModelBlock.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:59:07.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
+              "RelativeDocumentMoniker": "Main.cs",
+              "ToolTip": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Main.cs",
+              "RelativeToolTip": "Main.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAArwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:59:16.244Z",
               "EditorCaption": ""
             }
           ]
