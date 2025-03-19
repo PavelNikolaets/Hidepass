@@ -12,7 +12,7 @@ namespace Hidepass.Forms.Block
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            ControllerBlock.ControllerCreateBlock(InputName.Text, InputDescription.Text, @$"{Main.GPathToDir}\{InputName.Text}.json");
+            ControllerBlock.ControllerCreateBlock(InputName.Text, InputDescription.Text, InputMasterKey.Text, @$"{Main.GPathToDir}\{InputName.Text}.json");
             Close();
         }
     }

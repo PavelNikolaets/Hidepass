@@ -8,7 +8,7 @@ using Hidepass.Logic.MVC.Block;
 using Hidepass.Logic.MVC.Cell;
 using Hidepass.Logic.OperationCryptography;
 using Hidepass.ObjectTemplates;
-using System;
+using Microsoft.VisualBasic;
 using File = System.IO.File;
 
 namespace Hidepass
@@ -20,6 +20,8 @@ namespace Hidepass
 
         public static ListBox GListBlocks;
         public static ListBox GListCells;
+
+        public static string CurrentMasterKey = string.Empty;
 
         private static int SelectedBlockIndex = 0;
 
@@ -36,21 +38,22 @@ namespace Hidepass
 
         private void ListBlocks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            //Добавить диалоговое окно с вводом мастер пароля
 
-            SelectedBlockIndex = ListBlocks.SelectedIndex;
+            CurrentMasterKey = Interaction.InputBox("Введите ключ от этого блока", "Ввод ключа", "");
 
-            if (SelectedBlockIndex >= 0)
+            if (CurrentMasterKey != string.Empty)
             {
-                //string encryptedMeta = File.ReadAllText(GPathToFileMetadata);
-                //string jsonMeta = CryptographyModule.Decrypt(encryptedMeta);
-                //RootBlock root = JsonService.ToObject<RootBlock>(jsonMeta);
+                SelectedBlockIndex = ListBlocks.SelectedIndex;
 
-                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
-                ViewPassword.DisplayCells(ListCells, path);
+                if (SelectedBlockIndex >= 0)
+                {
+                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+                    ViewPassword.DisplayCells(ListCells, path, CurrentMasterKey);
+                }
+
+                ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
             }
-
-            ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex);
         }
 
         private void ButtonCreateBlock_Click(object sender, EventArgs e)
@@ -72,10 +75,13 @@ namespace Hidepass
 
         private void ButtonDeleteBlock_Click(object sender, EventArgs e)
         {
-            string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+            if (SelectedBlockIndex >= 0)
+            {
+                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
-            ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex);
-            ViewPassword.DisplayLabelDescription(BlockDescription, -1);
+                ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex, CurrentMasterKey);
+                ViewPassword.DisplayLabelDescription(BlockDescription, -1, CurrentMasterKey);
+            }
         }
 
         private void ButtonCreateCell_Click(object sender, EventArgs e)
@@ -99,7 +105,7 @@ namespace Hidepass
             {
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
-                ControllerCell.ControlerDeleteCell(path, index);
+                ControllerCell.ControlerDeleteCell(path, index, CurrentMasterKey);
             }
         }
 
@@ -128,7 +134,7 @@ namespace Hidepass
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
                 string encryptedCellData = File.ReadAllText(path);
-                RootCell cellData = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData));
+                RootCell cellData = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData, CurrentMasterKey));
 
                 CellObject obj = cellData.Cells[index];
 
@@ -148,7 +154,7 @@ namespace Hidepass
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
                 string encryptedCellData = File.ReadAllText(path);
-                RootCell rootCell = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData));
+                RootCell rootCell = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData, CurrentMasterKey));
                 CellObject obj = rootCell.Cells[index];
 
                 FChangeCell fChangeCell = new(obj, path, index);

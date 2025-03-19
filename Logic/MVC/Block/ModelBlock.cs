@@ -8,20 +8,20 @@ namespace Hidepass.Logic.MVC.Block
 {
     internal class ModelBlock
     {
-        public static void ModelCreateBlock(string name, string description, string pathToBlock)
+        public static void ModelCreateBlock(string name, string description, string key, string pathToBlock)
         {
             string jsonMeta = File.ReadAllText(Main.GPathToFileMetadata);
             RootBlock obj = jsonMeta != "" ? JsonService.ToObject<RootBlock>(jsonMeta) : new();
 
             obj.Blocks.Add(new(name, description, pathToBlock));
 
-            File.WriteAllText(pathToBlock, CryptographyModule.Encrypt(JsonService.ToJson<RootCell>(new())));
+            File.WriteAllText(pathToBlock, CryptographyModule.Encrypt(JsonService.ToJson<RootCell>(new(key)), key));
             File.WriteAllText(Main.GPathToFileMetadata, JsonService.ToJson(obj));
 
-            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata);
+            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata, key);
         }
 
-        public static void ModelDeleteBlock(string pathToBlock, int index)
+        public static void ModelDeleteBlock(string pathToBlock, int index, string key)
         {
             RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata));
             obj.Blocks.RemoveAt(index);
@@ -30,10 +30,10 @@ namespace Hidepass.Logic.MVC.Block
             File.Delete(pathToBlock);
 
             Main.GListCells.Items.Clear();
-            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata);
+            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata, key);
         }
 
-        public static void ModelChangeBlock(int index, string name, string description)
+        public static void ModelChangeBlock(int index, string name, string description, string key)
         {
             RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata));
 
@@ -42,7 +42,7 @@ namespace Hidepass.Logic.MVC.Block
 
             File.WriteAllText(Main.GPathToFileMetadata, JsonService.ToJson(obj));
 
-            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata);
+            ViewPassword.DisplayBlocks(Main.GListBlocks, Main.GPathToFileMetadata, key);
         }
     }
 }

@@ -79,5 +79,15 @@ namespace Hidepass.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_импорт_базы_данных_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-импорт-базы-данных-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

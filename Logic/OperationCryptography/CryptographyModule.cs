@@ -17,9 +17,9 @@ namespace Hidepass.Logic.OperationCryptography
             return sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
         }
 
-        public static string Encrypt(string plainText) //Шифрование
+        public static string Encrypt(string plainText, string masterKey) //Шифрование
         {
-            string key = GetComputerNameKey();
+            string key = masterKey;
             byte[] keyBytes = DeriveKey(key);
 
             using Aes aes = Aes.Create();
@@ -39,9 +39,9 @@ namespace Hidepass.Logic.OperationCryptography
             return Convert.ToBase64String(result);
         }
 
-        public static string Decrypt(string cipherText) //Дешифрование
+        public static string Decrypt(string cipherText, string masterKey) //Дешифрование
         {
-            string key = GetComputerNameKey();
+            string key = masterKey;
             byte[] keyBytes = DeriveKey(key);
 
             byte[] combinedData = Convert.FromBase64String(cipherText);

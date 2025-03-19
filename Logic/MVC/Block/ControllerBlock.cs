@@ -6,14 +6,14 @@ namespace Hidepass.Logic.MVC.Block
 {
     internal class ControllerBlock
     {
-        public static void ControllerCreateBlock(string name, string description, string pathToBlock)
+        public static void ControllerCreateBlock(string name, string description, string key, string pathToBlock)
         {
             string[] paramAll = [name, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
                 if (name.Contains('\\') == false)
                 {
-                    ModelBlock.ModelCreateBlock(name, description, pathToBlock);
+                    ModelBlock.ModelCreateBlock(name, description, key, pathToBlock);
                 }
             }
             else
@@ -22,19 +22,19 @@ namespace Hidepass.Logic.MVC.Block
             }
         }
 
-        public static void ControllerDeleteBlock(string pathToBlock, int index)
+        public static void ControllerDeleteBlock(string pathToBlock, int index, string key)
         {
             if (Path.Exists(pathToBlock) && index >= 0)
             {
-                ModelBlock.ModelDeleteBlock(pathToBlock, index);
+                ModelBlock.ModelDeleteBlock(pathToBlock, index, key);
             }
         }
 
-        public static void ControllerChangeBlock(int index, string name, string description)
+        public static void ControllerChangeBlock(int index, string name, string description, string key)
         {
             if (JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata)).Blocks.Count >= index)
             {
-                ModelBlock.ModelChangeBlock(index, name, description);
+                ModelBlock.ModelChangeBlock(index, name, description, key);
             }
         }
     }

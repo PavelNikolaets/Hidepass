@@ -8,36 +8,36 @@ namespace Hidepass.Logic.MVC.Cell
 {
     internal class ModelCell
     {
-        public static void ModelCreateCell(string name, string description, string login, string password, string path)
+        public static void ModelCreateCell(string name, string description, string login, string password, string key, string path)
         {
             string encryptedJson = File.ReadAllText(path);
-            string json = encryptedJson != "" ? CryptographyModule.Decrypt(encryptedJson) : "";
-            RootCell obj = json != "" ? JsonService.ToObject<RootCell>(json) : new();
+            string json = encryptedJson != "" ? CryptographyModule.Decrypt(encryptedJson, key) : "";
+            RootCell obj = json != "" ? JsonService.ToObject<RootCell>(json) : new(key);
 
             obj.Cells.Add(new(name, description, login, password));
 
             string outputJson = JsonService.ToJson(obj);
-            File.WriteAllText(path, CryptographyModule.Encrypt(outputJson));
+            File.WriteAllText(path, CryptographyModule.Encrypt(outputJson, key));
 
-            ViewPassword.DisplayCells(Main.GListCells, path);
+            ViewPassword.DisplayCells(Main.GListCells, path, key);
         }
 
-        public static void ModelDeleteCell(string path, int index)
+        public static void ModelDeleteCell(string path, int index, string key)
         {
             string encryptedJson = File.ReadAllText(path);
-            string json = CryptographyModule.Decrypt(encryptedJson);
+            string json = CryptographyModule.Decrypt(encryptedJson, key);
             RootCell obj = JsonService.ToObject<RootCell>(json);
             obj.Cells.RemoveAt(index);
 
-            File.WriteAllText(path, CryptographyModule.Encrypt(JsonService.ToJson(obj)));
+            File.WriteAllText(path, CryptographyModule.Encrypt(JsonService.ToJson(obj), key));
 
-            ViewPassword.DisplayCells(Main.GListCells, path);
+            ViewPassword.DisplayCells(Main.GListCells, path, key);
         }
 
-        public static void ModelChangeCell(string path, int index, string name, string description, string login, string password)
+        public static void ModelChangeCell(string path, int index, string name, string description, string login, string password, string key)
         {
             string encryptedJson = File.ReadAllText(path);
-            string json = CryptographyModule.Decrypt(encryptedJson);
+            string json = CryptographyModule.Decrypt(encryptedJson, key);
             RootCell obj = JsonService.ToObject<RootCell>(json);
 
             obj.Cells[index].Name = name;
@@ -46,8 +46,8 @@ namespace Hidepass.Logic.MVC.Cell
             obj.Cells[index].Password = password;
             obj.Cells[index].DateUpdate = DateTime.Now.ToString("g");
 
-            File.WriteAllText(path, CryptographyModule.Encrypt(JsonService.ToJson(obj)));
-            ViewPassword.DisplayCells(Main.GListCells, path);
+            File.WriteAllText(path, CryptographyModule.Encrypt(JsonService.ToJson(obj), key));
+            ViewPassword.DisplayCells(Main.GListCells, path, key);
         }
     }
 }

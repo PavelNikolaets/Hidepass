@@ -7,7 +7,7 @@ namespace Hidepass.Logic.MVC
 {
     internal class ViewPassword
     {
-        public static void DisplayBlocks(ListBox listBlocks, string path)
+        public static void DisplayBlocks(ListBox listBlocks, string path, string key)
         {
             RootBlock blocks = JsonService.ToObject<RootBlock>(File.ReadAllText(path));
 
@@ -19,10 +19,10 @@ namespace Hidepass.Logic.MVC
             }
         }
 
-        public static void DisplayCells(ListBox listCells, string path)
+        public static void DisplayCells(ListBox listCells, string path, string key)
         {
             string encryptedJson = File.ReadAllText(path);
-            string json = CryptographyModule.Decrypt(encryptedJson);
+            string json = CryptographyModule.Decrypt(encryptedJson, key);
             RootCell cells = JsonService.ToObject<RootCell>(json);
 
             listCells.Items.Clear();
@@ -33,7 +33,7 @@ namespace Hidepass.Logic.MVC
             }
         }
 
-        public static void DisplayLabelDescription(Label label, int index)
+        public static void DisplayLabelDescription(Label label, int index, string key)
         {
             if (index >= 0)
             {

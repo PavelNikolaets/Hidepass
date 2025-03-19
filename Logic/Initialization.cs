@@ -24,7 +24,7 @@ namespace Hidepass.Logic
         {
             if (File.ReadAllText(metadata) != "")
             {
-                ViewPassword.DisplayBlocks(Main.GListBlocks, metadata);
+                ViewPassword.DisplayBlocks(Main.GListBlocks, metadata, Main.CurrentMasterKey);
             }
         }
     }

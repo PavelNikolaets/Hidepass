@@ -31,6 +31,7 @@
             InputName = new TextBox();
             InputDescription = new TextBox();
             ButtonCreate = new Button();
+            InputMasterKey = new TextBox();
             SuspendLayout();
             // 
             // InputName
@@ -48,7 +49,7 @@
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
             InputDescription.ScrollBars = ScrollBars.Vertical;
-            InputDescription.Size = new Size(222, 125);
+            InputDescription.Size = new Size(222, 96);
             InputDescription.TabIndex = 2;
             // 
             // ButtonCreate
@@ -61,12 +62,21 @@
             ButtonCreate.UseVisualStyleBackColor = true;
             ButtonCreate.Click += ButtonCreate_Click;
             // 
+            // InputMasterKey
+            // 
+            InputMasterKey.Location = new Point(12, 143);
+            InputMasterKey.Name = "InputMasterKey";
+            InputMasterKey.PlaceholderText = "Мастер пароль";
+            InputMasterKey.Size = new Size(222, 23);
+            InputMasterKey.TabIndex = 4;
+            // 
             // FCreateBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(246, 223);
+            Controls.Add(InputMasterKey);
             Controls.Add(ButtonCreate);
             Controls.Add(InputDescription);
             Controls.Add(InputName);
@@ -81,5 +91,6 @@
         private TextBox InputName;
         private TextBox InputDescription;
         private Button ButtonCreate;
+        private TextBox InputMasterKey;
     }
 }

@@ -1,9 +1,10 @@
 ﻿
 namespace Hidepass.ObjectTemplates
 {
-    public class RootCell
+    public class RootCell(string key)
     {
         public List<CellObject> Cells { get; set; } = [];
+        public string Key { get; set; } = key;
     }
 
     public class CellObject(string Name, string Description, string Login, string Password)

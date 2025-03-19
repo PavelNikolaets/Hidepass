@@ -24,7 +24,7 @@ namespace Hidepass.Forms.Cell
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ControllerCell.ControllerChangeCell(Path, Index, InputName.Text, InputDescription.Text, InputLogin.Text, InputPassword.Text);
+            ControllerCell.ControllerChangeCell(Path, Index, InputName.Text, InputDescription.Text, InputLogin.Text, InputPassword.Text, Main.CurrentMasterKey);
             Close();
         }
     }

@@ -37,6 +37,11 @@
             ButtonChangeCell = new Button();
             ButtonDeleteCell = new Button();
             BlockDescription = new Label();
+            MenuTools = new ToolStrip();
+            Files = new ToolStripDropDownButton();
+            имортToolStripMenuItem = new ToolStripMenuItem();
+            экспортToolStripMenuItem = new ToolStripMenuItem();
+            MenuTools.SuspendLayout();
             SuspendLayout();
             // 
             // ListBlocks
@@ -44,25 +49,27 @@
             ListBlocks.FormattingEnabled = true;
             ListBlocks.HorizontalScrollbar = true;
             ListBlocks.ItemHeight = 15;
-            ListBlocks.Location = new Point(12, 12);
+            ListBlocks.Location = new Point(12, 42);
             ListBlocks.Name = "ListBlocks";
-            ListBlocks.Size = new Size(273, 289);
+            ListBlocks.Size = new Size(273, 259);
             ListBlocks.TabIndex = 0;
             ListBlocks.SelectedIndexChanged += ListBlocks_SelectedIndexChanged;
             // 
             // ListCells
             // 
+            ListCells.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             ListCells.FormattingEnabled = true;
             ListCells.HorizontalScrollbar = true;
             ListCells.ItemHeight = 15;
-            ListCells.Location = new Point(291, 12);
+            ListCells.Location = new Point(291, 42);
             ListCells.Name = "ListCells";
-            ListCells.Size = new Size(497, 379);
+            ListCells.Size = new Size(497, 349);
             ListCells.TabIndex = 1;
             ListCells.MouseDoubleClick += ListCells_MouseDoubleClick;
             // 
             // ButtonCreateBlock
             // 
+            ButtonCreateBlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ButtonCreateBlock.Location = new Point(12, 397);
             ButtonCreateBlock.Name = "ButtonCreateBlock";
             ButtonCreateBlock.Size = new Size(87, 41);
@@ -73,6 +80,7 @@
             // 
             // ButtonChangeBlock
             // 
+            ButtonChangeBlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ButtonChangeBlock.Location = new Point(105, 397);
             ButtonChangeBlock.Name = "ButtonChangeBlock";
             ButtonChangeBlock.Size = new Size(87, 41);
@@ -83,6 +91,7 @@
             // 
             // ButtonDeleteBlock
             // 
+            ButtonDeleteBlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ButtonDeleteBlock.Location = new Point(198, 397);
             ButtonDeleteBlock.Name = "ButtonDeleteBlock";
             ButtonDeleteBlock.Size = new Size(87, 41);
@@ -93,6 +102,7 @@
             // 
             // ButtonCreateCell
             // 
+            ButtonCreateCell.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ButtonCreateCell.Location = new Point(515, 397);
             ButtonCreateCell.Name = "ButtonCreateCell";
             ButtonCreateCell.Size = new Size(87, 41);
@@ -103,6 +113,7 @@
             // 
             // ButtonChangeCell
             // 
+            ButtonChangeCell.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ButtonChangeCell.Location = new Point(608, 397);
             ButtonChangeCell.Name = "ButtonChangeCell";
             ButtonChangeCell.Size = new Size(87, 41);
@@ -113,6 +124,7 @@
             // 
             // ButtonDeleteCell
             // 
+            ButtonDeleteCell.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ButtonDeleteCell.Location = new Point(701, 397);
             ButtonDeleteCell.Name = "ButtonDeleteCell";
             ButtonDeleteCell.Size = new Size(87, 41);
@@ -123,6 +135,7 @@
             // 
             // BlockDescription
             // 
+            BlockDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BlockDescription.BorderStyle = BorderStyle.Fixed3D;
             BlockDescription.Location = new Point(12, 304);
             BlockDescription.Name = "BlockDescription";
@@ -130,12 +143,42 @@
             BlockDescription.TabIndex = 8;
             BlockDescription.Text = "Описание:";
             // 
+            // MenuTools
+            // 
+            MenuTools.Items.AddRange(new ToolStripItem[] { Files });
+            MenuTools.Location = new Point(5, 5);
+            MenuTools.Name = "MenuTools";
+            MenuTools.RenderMode = ToolStripRenderMode.System;
+            MenuTools.Size = new Size(790, 25);
+            MenuTools.TabIndex = 9;
+            // 
+            // Files
+            // 
+            Files.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            Files.DropDownItems.AddRange(new ToolStripItem[] { имортToolStripMenuItem, экспортToolStripMenuItem });
+            Files.Image = Properties.Resources.icons8_импорт_базы_данных_24;
+            Files.ImageTransparentColor = Color.Magenta;
+            Files.Name = "Files";
+            Files.Size = new Size(29, 22);
+            // 
+            // имортToolStripMenuItem
+            // 
+            имортToolStripMenuItem.Name = "имортToolStripMenuItem";
+            имортToolStripMenuItem.Size = new Size(180, 22);
+            имортToolStripMenuItem.Text = "Иморт";
+            // 
+            // экспортToolStripMenuItem
+            // 
+            экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            экспортToolStripMenuItem.Size = new Size(180, 22);
+            экспортToolStripMenuItem.Text = "Экспорт";
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
             ClientSize = new Size(800, 450);
+            Controls.Add(MenuTools);
             Controls.Add(BlockDescription);
             Controls.Add(ButtonDeleteCell);
             Controls.Add(ButtonChangeCell);
@@ -148,7 +191,10 @@
             Name = "Main";
             Padding = new Padding(5);
             Text = "Passhide";
+            MenuTools.ResumeLayout(false);
+            MenuTools.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -162,5 +208,9 @@
         private Button ButtonChangeCell;
         private Button ButtonDeleteCell;
         private Label BlockDescription;
+        private ToolStrip MenuTools;
+        private ToolStripDropDownButton Files;
+        private ToolStripMenuItem имортToolStripMenuItem;
+        private ToolStripMenuItem экспортToolStripMenuItem;
     }
 }

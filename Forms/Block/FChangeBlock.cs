@@ -23,7 +23,7 @@ namespace Hidepass.Forms.Block
 
         private void ButtonChange_Click(object sender, EventArgs e)
         {
-            ControllerBlock.ControllerChangeBlock(Index, InputName.Text, InputDescription.Text);
+            ControllerBlock.ControllerChangeBlock(Index, InputName.Text, InputDescription.Text, Main.CurrentMasterKey);
             Close();
         }
     }

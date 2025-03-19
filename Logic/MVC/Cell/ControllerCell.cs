@@ -3,12 +3,12 @@ namespace Hidepass.Logic.MVC.Cell
 {
     internal class ControllerCell
     {
-        public static void ControllerCreateCell(string name, string description, string login, string password, string pathToBlock)
+        public static void ControllerCreateCell(string name, string description, string login, string password, string pathToBlock, string key)
         {
             string[] paramAll = [name, login, password, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
-                ModelCell.ModelCreateCell(name, description, login, password, pathToBlock);
+                ModelCell.ModelCreateCell(name, description, login, password, key, pathToBlock);
             }
             else
             {
@@ -16,19 +16,19 @@ namespace Hidepass.Logic.MVC.Cell
             }
         }
 
-        public static void ControlerDeleteCell(string pathToBlock, int index)
+        public static void ControlerDeleteCell(string pathToBlock, int index, string key)
         {
             if(File.Exists(pathToBlock))
             {
-                ModelCell.ModelDeleteCell(pathToBlock, index);
+                ModelCell.ModelDeleteCell(pathToBlock, index, key);
             }
         }
 
-        public static void ControllerChangeCell(string pathToBlock, int index, string name, string description, string login, string password)
+        public static void ControllerChangeCell(string pathToBlock, int index, string name, string description, string login, string password, string key)
         {
             if(File.Exists(pathToBlock))
             {
-                ModelCell.ModelChangeCell(pathToBlock, index, name, description, login, password);
+                ModelCell.ModelChangeCell(pathToBlock, index, name, description, login, password, key);
             }
         }
     }
