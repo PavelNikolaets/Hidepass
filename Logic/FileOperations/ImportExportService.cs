@@ -1,19 +1,27 @@
 ﻿
 using Hidepass.ObjectTemplates;
 using Hidepass.Logic.OperationCryptography;
+using Hidepass.Logic.MVC.Block;
+using Hidepass.Logic.MVC.Cell;
 
 namespace Hidepass.Logic.FileOperations
 {
     class ImportExportService
     {
-        public string ImportPassword(ImportExportPassword importPassword)
+        public static void ImportPassword(ImportExportPassword importPassword)
         {
-            return "";
+            BlockObject blockObj = importPassword.BlockInfo;
+
+            ControllerBlock.ControllerCreateBlock(blockObj.Name, blockObj.Description, importPassword.MasterKey, Main.GPathToFileMetadata);
+            importPassword.Cells.ForEach(cell => ControllerCell.ControllerCreateCell(cell.Name, cell.Description, cell.Login, cell.Password, blockObj.PathToFile, importPassword.MasterKey));
         }
 
-        public string ExportPassword(BlockObject block, RootCell cell, string key)
+        public static string ExportPassword(BlockObject block, RootCell cell, string key)
         {
-            return "";
+            ImportExportPassword exportPassword = new(block, cell.Cells, key);
+
+            string json = JsonService.ToJson(exportPassword);
+            return CryptographyModule.Encrypt(json, key);
         }
     }
 }

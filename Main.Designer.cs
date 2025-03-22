@@ -39,8 +39,8 @@
             BlockDescription = new Label();
             MenuTools = new ToolStrip();
             Files = new ToolStripDropDownButton();
-            имортToolStripMenuItem = new ToolStripMenuItem();
-            экспортToolStripMenuItem = new ToolStripMenuItem();
+            ImportToolStripMenuItem = new ToolStripMenuItem();
+            ExportToolStripMenuItem = new ToolStripMenuItem();
             MenuTools.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +53,8 @@
             ListBlocks.Name = "ListBlocks";
             ListBlocks.Size = new Size(273, 259);
             ListBlocks.TabIndex = 0;
-            ListBlocks.SelectedIndexChanged += ListBlocks_SelectedIndexChanged;
+            ListBlocks.MouseClick += ListBlocks_MouseClick;
+            ListBlocks.MouseDoubleClick += ListBlocks_MouseDoubleClick;
             // 
             // ListCells
             // 
@@ -155,23 +156,25 @@
             // Files
             // 
             Files.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            Files.DropDownItems.AddRange(new ToolStripItem[] { имортToolStripMenuItem, экспортToolStripMenuItem });
+            Files.DropDownItems.AddRange(new ToolStripItem[] { ImportToolStripMenuItem, ExportToolStripMenuItem });
             Files.Image = Properties.Resources.icons8_импорт_базы_данных_24;
             Files.ImageTransparentColor = Color.Magenta;
             Files.Name = "Files";
             Files.Size = new Size(29, 22);
             // 
-            // имортToolStripMenuItem
+            // ImportToolStripMenuItem
             // 
-            имортToolStripMenuItem.Name = "имортToolStripMenuItem";
-            имортToolStripMenuItem.Size = new Size(180, 22);
-            имортToolStripMenuItem.Text = "Иморт";
+            ImportToolStripMenuItem.Name = "ImportToolStripMenuItem";
+            ImportToolStripMenuItem.Size = new Size(119, 22);
+            ImportToolStripMenuItem.Text = "Иморт";
+            ImportToolStripMenuItem.Click += ImportToolStripMenuItem_Click;
             // 
-            // экспортToolStripMenuItem
+            // ExportToolStripMenuItem
             // 
-            экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
-            экспортToolStripMenuItem.Size = new Size(180, 22);
-            экспортToolStripMenuItem.Text = "Экспорт";
+            ExportToolStripMenuItem.Name = "ExportToolStripMenuItem";
+            ExportToolStripMenuItem.Size = new Size(119, 22);
+            ExportToolStripMenuItem.Text = "Экспорт";
+            ExportToolStripMenuItem.Click += ExportToolStripMenuItem_Click;
             // 
             // Main
             // 
@@ -210,7 +213,7 @@
         private Label BlockDescription;
         private ToolStrip MenuTools;
         private ToolStripDropDownButton Files;
-        private ToolStripMenuItem имортToolStripMenuItem;
-        private ToolStripMenuItem экспортToolStripMenuItem;
+        private ToolStripMenuItem ImportToolStripMenuItem;
+        private ToolStripMenuItem ExportToolStripMenuItem;
     }
 }

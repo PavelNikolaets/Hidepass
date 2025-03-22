@@ -1,10 +1,10 @@
 ﻿
 namespace Hidepass.ObjectTemplates
 {
-    class ImportExportPassword(BlockObject block, List<CellObject> cells, string key)
+    class ImportExportPassword(BlockObject blockInfo, List<CellObject> cells, string masterKey)
     {
-        public BlockObject BlockInfo { get; set; } = block;
-        public string MasterKey { get; set; } = key;
-        public List<CellObject> Cell { get; set; } = cells;
+        public BlockObject BlockInfo { get; set; } = blockInfo;
+        public string MasterKey { get; set; } = masterKey;
+        public List<CellObject> Cells { get; set; } = cells;
     }
 }

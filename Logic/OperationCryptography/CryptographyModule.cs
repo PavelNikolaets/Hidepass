@@ -17,7 +17,13 @@ namespace Hidepass.Logic.OperationCryptography
             return sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
         }
 
-        public static string Encrypt(string plainText, string masterKey) //Шифрование
+        /// <summary>
+        /// Шифрование
+        /// </summary>
+        /// <param name="plainText">Текст для шифрования</param>
+        /// <param name="masterKey">Ключ</param>
+        /// <returns></returns>
+        public static string Encrypt(string plainText, string masterKey)
         {
             string key = masterKey;
             byte[] keyBytes = DeriveKey(key);
@@ -39,7 +45,13 @@ namespace Hidepass.Logic.OperationCryptography
             return Convert.ToBase64String(result);
         }
 
-        public static string Decrypt(string cipherText, string masterKey) //Дешифрование
+        /// <summary>
+        /// Дешифрование
+        /// </summary>
+        /// <param name="cipherText">Зашифрованный текст</param>
+        /// <param name="masterKey">Ключ</param>
+        /// <returns></returns>
+        public static string Decrypt(string cipherText, string masterKey)
         {
             string key = masterKey;
             byte[] keyBytes = DeriveKey(key);
@@ -62,6 +74,7 @@ namespace Hidepass.Logic.OperationCryptography
             byte[] decryptedData = decryptor.TransformFinalBlock(encryptedData, 0, encryptedData.Length);
 
             return Encoding.UTF8.GetString(decryptedData);
+            //Косяк
         }
     }
 }

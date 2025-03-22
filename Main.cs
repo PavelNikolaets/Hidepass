@@ -6,6 +6,7 @@ using Hidepass.Logic.FileOperations;
 using Hidepass.Logic.MVC;
 using Hidepass.Logic.MVC.Block;
 using Hidepass.Logic.MVC.Cell;
+using Hidepass.Logic.MVC.ImportExport;
 using Hidepass.Logic.OperationCryptography;
 using Hidepass.ObjectTemplates;
 using Microsoft.VisualBasic;
@@ -23,7 +24,7 @@ namespace Hidepass
 
         public static string CurrentMasterKey = string.Empty;
 
-        private static int SelectedBlockIndex = 0;
+        private static int SelectedBlockIndex = -1;
 
         public Main()
         {
@@ -36,17 +37,16 @@ namespace Hidepass
             Initialization.InitDisplay(GPathToFileMetadata);
         }
 
-        private void ListBlocks_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBlocks_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //Добавить диалоговое окно с вводом мастер пароля
+            int index = ListBlocks.IndexFromPoint(e.Location);
 
-            CurrentMasterKey = Interaction.InputBox("Введите ключ от этого блока", "Ввод ключа", "");
-
-            if (CurrentMasterKey != string.Empty)
+            if (index >= 0)
             {
-                SelectedBlockIndex = ListBlocks.SelectedIndex;
+                CurrentMasterKey = Interaction.InputBox("Введите ключ от этого блока", "Ввод ключа", "");
+                SelectedBlockIndex = index;
 
-                if (SelectedBlockIndex >= 0)
+                if (CurrentMasterKey != string.Empty)
                 {
                     string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
                     ViewPassword.DisplayCells(ListCells, path, CurrentMasterKey);
@@ -77,10 +77,13 @@ namespace Hidepass
         {
             if (SelectedBlockIndex >= 0)
             {
-                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+                if (MessageBox.Show(text: "Вы действительно хотите удалить блок?", caption: "Удалить?", buttons: MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
-                ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex, CurrentMasterKey);
-                ViewPassword.DisplayLabelDescription(BlockDescription, -1, CurrentMasterKey);
+                    ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex, CurrentMasterKey);
+                    ViewPassword.DisplayLabelDescription(BlockDescription, -1, CurrentMasterKey);
+                }
             }
         }
 
@@ -103,25 +106,14 @@ namespace Hidepass
 
             if (index >= 0)
             {
-                string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
+                if (MessageBox.Show(text: "Вы действительно хотите удалить ячейку?", caption: "Удалить?", buttons: MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
-                ControllerCell.ControlerDeleteCell(path, index, CurrentMasterKey);
+                    ControllerCell.ControlerDeleteCell(path, index, CurrentMasterKey);
+                }
             }
         }
-
-        //private void ListCells_DoubleClick(object sender, EventArgs e)
-        //{
-        //    int index = ListCells.SelectedIndex;
-
-        //    if (index >= 0)
-        //    {
-        //        string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
-        //        CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
-
-        //        FViewCell fViewCell = new(obj);
-        //        fViewCell.Show();
-        //    }
-        //}
 
         private void ListCells_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -137,8 +129,6 @@ namespace Hidepass
                 RootCell cellData = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData, CurrentMasterKey));
 
                 CellObject obj = cellData.Cells[index];
-
-                //CellObject obj = JsonService.ToObject<RootCell>(File.ReadAllText(path)).Cells[index];
 
                 FViewCell fViewCell = new(obj);
                 fViewCell.Show();
@@ -161,6 +151,50 @@ namespace Hidepass
                 fChangeCell.Show();
 
             }
+        }
+
+        private void ImportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using OpenFileDialog openFileDialog = new()
+            {
+                Multiselect = false
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ControllerExportImport.ControllerImport(openFileDialog.FileName);
+            }
+        }
+
+        private void ExportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedBlockIndex >= 0 && CurrentMasterKey != string.Empty)
+            {
+                using SaveFileDialog saveFileDialog = new()
+                {
+                    DefaultExt = ".txt",
+                    AddExtension = true,
+                };
+
+                string jsonBlock = File.ReadAllText(GPathToFileMetadata);
+                BlockObject blockObj = JsonService.ToObject<RootBlock>(jsonBlock).Blocks[SelectedBlockIndex];
+
+                string rootCellObjDecrypt = CryptographyModule.Decrypt(File.ReadAllText(blockObj.PathToFile), CurrentMasterKey);
+                RootCell rootCellObj = JsonService.ToObject<RootCell>(rootCellObjDecrypt);
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string name = saveFileDialog.FileName;
+
+                    ControllerExportImport.ControllerExport(name, blockObj, rootCellObj, CurrentMasterKey);
+                }
+            }
+        }
+
+        private void ListBlocks_MouseClick(object sender, MouseEventArgs e)
+        {
+            SelectedBlockIndex = ListBlocks.IndexFromPoint(e.Location);
+            ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
         }
     }
 }
