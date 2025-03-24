@@ -13,7 +13,7 @@ namespace Hidepass.Logic.FileOperations
             BlockObject blockObj = importPassword.BlockInfo;
 
             ControllerBlock.ControllerCreateBlock(blockObj.Name, blockObj.Description, importPassword.MasterKey, blockObj.PathToFile);
-            importPassword.Cells.ForEach(cell => ControllerCell.ControllerCreateCell(cell.Name, cell.Description, cell.Login, cell.Password, blockObj.PathToFile, importPassword.MasterKey));
+            importPassword.Cells.ForEach(cell => ControllerCell.ControllerCreateCell(cell.Name, cell.Description, cell.Login, cell.Password, blockObj.PathToFile, cell.DateCreate, importPassword.MasterKey));
         }
 
         public static string ExportPassword(BlockObject block, RootCell cell, string key)

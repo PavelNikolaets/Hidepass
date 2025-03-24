@@ -15,7 +15,7 @@ namespace Hidepass.Forms.Cell
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            ControllerCell.ControllerCreateCell(InputName.Text, InputDescription.Text, InputLogin.Text, InputPassword.Text, PathToBlock, Main.CurrentMasterKey);
+            ControllerCell.ControllerCreateCell(InputName.Text, InputDescription.Text, InputLogin.Text, InputPassword.Text, PathToBlock, DateTime.Now.ToString("g"), Main.CurrentMasterKey);
             Close();
         }
     }

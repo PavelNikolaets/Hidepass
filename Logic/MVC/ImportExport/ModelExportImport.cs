@@ -2,7 +2,6 @@
 using Hidepass.Logic.FileOperations;
 using Hidepass.Logic.OperationCryptography;
 using Hidepass.ObjectTemplates;
-using Microsoft.VisualBasic;
 using File = System.IO.File;
 
 namespace Hidepass.Logic.MVC.ImportExport

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             ListBlocks = new ListBox();
             ListCells = new ListBox();
             ButtonCreateBlock = new Button();
@@ -41,6 +42,7 @@
             Files = new ToolStripDropDownButton();
             ImportToolStripMenuItem = new ToolStripMenuItem();
             ExportToolStripMenuItem = new ToolStripMenuItem();
+            toolStripBtnAbout = new ToolStripButton();
             MenuTools.SuspendLayout();
             SuspendLayout();
             // 
@@ -146,7 +148,7 @@
             // 
             // MenuTools
             // 
-            MenuTools.Items.AddRange(new ToolStripItem[] { Files });
+            MenuTools.Items.AddRange(new ToolStripItem[] { Files, toolStripBtnAbout });
             MenuTools.Location = new Point(5, 5);
             MenuTools.Name = "MenuTools";
             MenuTools.RenderMode = ToolStripRenderMode.System;
@@ -175,6 +177,16 @@
             ExportToolStripMenuItem.Size = new Size(119, 22);
             ExportToolStripMenuItem.Text = "Экспорт";
             ExportToolStripMenuItem.Click += ExportToolStripMenuItem_Click;
+            // 
+            // toolStripBtnAbout
+            // 
+            toolStripBtnAbout.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripBtnAbout.Image = (Image)resources.GetObject("toolStripBtnAbout.Image");
+            toolStripBtnAbout.ImageTransparentColor = Color.Magenta;
+            toolStripBtnAbout.Name = "toolStripBtnAbout";
+            toolStripBtnAbout.Size = new Size(67, 22);
+            toolStripBtnAbout.Text = "О проекте";
+            toolStripBtnAbout.Click += toolStripBtnAbout_Click;
             // 
             // Main
             // 
@@ -215,5 +227,6 @@
         private ToolStripDropDownButton Files;
         private ToolStripMenuItem ImportToolStripMenuItem;
         private ToolStripMenuItem ExportToolStripMenuItem;
+        private ToolStripButton toolStripBtnAbout;
     }
 }

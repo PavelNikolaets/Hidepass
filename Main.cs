@@ -200,5 +200,11 @@ namespace Hidepass
             SelectedBlockIndex = ListBlocks.IndexFromPoint(e.Location);
             ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
         }
+
+        private void toolStripBtnAbout_Click(object sender, EventArgs e)
+        {
+            string textAbout = File.ReadAllText(@"about.txt");
+            MessageBox.Show(textAbout, "О проекте");
+        }
     }
 }
