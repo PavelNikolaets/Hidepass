@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hidepass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be9c9e568f893a2f363bbbbe5e7b7e164250765a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb3c2c5a59a7dfdfa3bcbe951a080b8c3d745a96")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hidepass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hidepass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

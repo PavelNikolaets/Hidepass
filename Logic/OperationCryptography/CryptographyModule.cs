@@ -25,24 +25,31 @@ namespace Hidepass.Logic.OperationCryptography
         /// <returns></returns>
         public static string Encrypt(string plainText, string masterKey)
         {
-            string key = masterKey;
-            byte[] keyBytes = DeriveKey(key);
+            try
+            {
+                string key = masterKey;
+                byte[] keyBytes = DeriveKey(key);
 
-            using Aes aes = Aes.Create();
-            aes.Key = keyBytes;
-            aes.GenerateIV();
+                using Aes aes = Aes.Create();
+                aes.Key = keyBytes;
+                aes.GenerateIV();
 
-            ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+                ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
 
-            byte[] inputBytes = Encoding.UTF8.GetBytes(plainText);
+                byte[] inputBytes = Encoding.UTF8.GetBytes(plainText);
 
-            byte[] encryptedData = encryptor.TransformFinalBlock(inputBytes, 0, inputBytes.Length);
+                byte[] encryptedData = encryptor.TransformFinalBlock(inputBytes, 0, inputBytes.Length);
 
-            byte[] result = new byte[aes.IV.Length + encryptedData.Length];
-            Buffer.BlockCopy(aes.IV, 0, result, 0, aes.IV.Length);
-            Buffer.BlockCopy(encryptedData, 0, result, aes.IV.Length, encryptedData.Length);
+                byte[] result = new byte[aes.IV.Length + encryptedData.Length];
+                Buffer.BlockCopy(aes.IV, 0, result, 0, aes.IV.Length);
+                Buffer.BlockCopy(encryptedData, 0, result, aes.IV.Length, encryptedData.Length);
 
-            return Convert.ToBase64String(result);
+                return Convert.ToBase64String(result);
+            }
+            catch (Exception)
+            {
+                return default;
+            }
         }
 
         /// <summary>
@@ -53,27 +60,36 @@ namespace Hidepass.Logic.OperationCryptography
         /// <returns></returns>
         public static string Decrypt(string cipherText, string masterKey)
         {
-            string key = masterKey;
-            byte[] keyBytes = DeriveKey(key);
+            try
+            {
+                string key = masterKey;
+                byte[] keyBytes = DeriveKey(key);
 
-            byte[] combinedData = Convert.FromBase64String(cipherText);
+                byte[] combinedData = Convert.FromBase64String(cipherText);
 
-            int ivLength = 16;
-            byte[] iv = new byte[ivLength];
-            byte[] encryptedData = new byte[combinedData.Length - ivLength];
+                int ivLength = 16;
+                byte[] iv = new byte[ivLength];
+                byte[] encryptedData = new byte[combinedData.Length - ivLength];
 
-            Buffer.BlockCopy(combinedData, 0, iv, 0, iv.Length);
-            Buffer.BlockCopy(combinedData, iv.Length, encryptedData, 0, encryptedData.Length);
+                Buffer.BlockCopy(combinedData, 0, iv, 0, iv.Length);
+                Buffer.BlockCopy(combinedData, iv.Length, encryptedData, 0, encryptedData.Length);
 
-            using Aes aes = Aes.Create();
-            aes.Key = keyBytes;
-            aes.IV = iv;
+                using Aes aes = Aes.Create();
+                aes.Key = keyBytes;
+                aes.IV = iv;
 
-            ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
 
-            byte[] decryptedData = decryptor.TransformFinalBlock(encryptedData, 0, encryptedData.Length);
+                byte[] decryptedData = decryptor.TransformFinalBlock(encryptedData, 0, encryptedData.Length);
 
-            return Encoding.UTF8.GetString(decryptedData);
+                return Encoding.UTF8.GetString(decryptedData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка дешифрования. Убдеитесь в правильности ключа!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return default;
+            }
+            
             //Косяк
         }
     }

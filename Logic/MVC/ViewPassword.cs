@@ -21,16 +21,24 @@ namespace Hidepass.Logic.MVC
 
         public static void DisplayCells(ListBox listCells, string path, string key)
         {
-            string encryptedJson = File.ReadAllText(path);
-            string json = CryptographyModule.Decrypt(encryptedJson, key);
-            RootCell cells = JsonService.ToObject<RootCell>(json);
-
-            listCells.Items.Clear();
-
-            if (cells.Cells.Count > 0)
+            try
             {
-                cells.Cells.ForEach(cell => listCells.Items.Add(cell.Name));
+                string encryptedJson = File.ReadAllText(path);
+                string json = CryptographyModule.Decrypt(encryptedJson, key);
+                RootCell cells = JsonService.ToObject<RootCell>(json);
+
+                listCells.Items.Clear();
+
+                if (cells.Cells.Count > 0 )
+                {
+                    cells.Cells.ForEach(cell => listCells.Items.Add(cell.Name));
+                }
             }
+            catch (Exception)
+            {
+                return;
+            }
+            
         }
 
         public static void DisplayLabelDescription(Label label, int index, string key)

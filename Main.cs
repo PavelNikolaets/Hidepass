@@ -48,7 +48,8 @@ namespace Hidepass
 
                 if (CurrentMasterKey != string.Empty)
                 {
-                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
+                    string metadatablock = File.ReadAllText(GPathToFileMetadata);
+                    string path = JsonService.ToObject<RootBlock>(metadatablock).Blocks[SelectedBlockIndex].PathToFile;
                     ViewPassword.DisplayCells(ListCells, path, CurrentMasterKey);
                 }
 
@@ -91,7 +92,7 @@ namespace Hidepass
         {
             int index = ListBlocks.SelectedIndex;
 
-            if (index >= 0)
+            if (index >= 0 && CurrentMasterKey != "")
             {
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
@@ -104,7 +105,7 @@ namespace Hidepass
         {
             int index = ListBlocks.SelectedIndex;
 
-            if (index >= 0)
+            if (index >= 0 && CurrentMasterKey != "")
             {
                 if (MessageBox.Show(text: "¬ы действительно хотите удалить €чейку?", caption: "”далить?", buttons: MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
@@ -139,7 +140,7 @@ namespace Hidepass
         {
             int index = ListCells.SelectedIndex;
 
-            if (index >= 0)
+            if (index >= 0 && CurrentMasterKey != "")
             {
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
@@ -162,7 +163,10 @@ namespace Hidepass
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                ControllerExportImport.ControllerImport(openFileDialog.FileName);
+                CurrentMasterKey = Interaction.InputBox("¬ведите ключ от этого блока", "¬вод ключа", "");
+                ControllerExportImport.ControllerImport(openFileDialog.FileName, CurrentMasterKey);
+                ListCells.Items.Clear();
+
             }
         }
 

@@ -16,6 +16,17 @@ namespace Hidepass.Logic.FileOperations
 
         public static string ToJson<T>(T inputObj) => JsonSerializer.Serialize(inputObj, options);
 
-        public static T ToObject<T>(string json) => JsonSerializer.Deserialize<T>(json);
+        public static T ToObject<T>(string json)
+        {
+            try
+            {
+                return JsonSerializer.Deserialize<T>(json);
+            }
+            catch (JsonException)
+            {
+                return default;
+            }
+            
+        }
     }
 }

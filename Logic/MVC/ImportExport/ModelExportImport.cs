@@ -11,14 +11,17 @@ namespace Hidepass.Logic.MVC.ImportExport
     {
         public static void ModelExport(string fileName, BlockObject block, RootCell cell, string key)
         {
-            File.WriteAllText(fileName, ImportExportService.ExportPassword(block, cell, key));
+            string text = ImportExportService.ExportPassword(block, cell, key);
+
+            File.WriteAllText(fileName, text);
         }
 
-        public static void ModelImport(string fileName)
+        public static void ModelImport(string fileName, string key)
         {
-            string key = Interaction.InputBox("Введите ключ от этого блока", "Ввод ключа", "");
             string text = CryptographyModule.Decrypt(File.ReadAllText(fileName), key);
+
             ImportExportPassword obj = JsonService.ToObject<ImportExportPassword>(text);
+
             ImportExportService.ImportPassword(obj);
         }
     }
