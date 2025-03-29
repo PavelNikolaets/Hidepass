@@ -32,31 +32,33 @@
             InputDescription = new TextBox();
             ButtonCreate = new Button();
             InputMasterKey = new TextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // InputName
             // 
-            InputName.Location = new Point(12, 12);
+            InputName.Location = new Point(3, 3);
             InputName.Name = "InputName";
-            InputName.PlaceholderText = "Нзвание";
-            InputName.Size = new Size(222, 23);
+            InputName.PlaceholderText = "Название";
+            InputName.Size = new Size(303, 23);
             InputName.TabIndex = 1;
             // 
             // InputDescription
             // 
-            InputDescription.Location = new Point(12, 41);
+            InputDescription.Location = new Point(3, 32);
             InputDescription.Multiline = true;
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
             InputDescription.ScrollBars = ScrollBars.Vertical;
-            InputDescription.Size = new Size(222, 96);
+            InputDescription.Size = new Size(303, 96);
             InputDescription.TabIndex = 2;
             // 
             // ButtonCreate
             // 
-            ButtonCreate.Location = new Point(12, 172);
+            ButtonCreate.Location = new Point(3, 163);
             ButtonCreate.Name = "ButtonCreate";
-            ButtonCreate.Size = new Size(222, 43);
+            ButtonCreate.Size = new Size(303, 43);
             ButtonCreate.TabIndex = 3;
             ButtonCreate.Text = "Создать";
             ButtonCreate.UseVisualStyleBackColor = true;
@@ -64,24 +66,37 @@
             // 
             // InputMasterKey
             // 
-            InputMasterKey.Location = new Point(12, 143);
+            InputMasterKey.Location = new Point(3, 134);
             InputMasterKey.Name = "InputMasterKey";
             InputMasterKey.PlaceholderText = "Мастер пароль";
-            InputMasterKey.Size = new Size(222, 23);
+            InputMasterKey.Size = new Size(303, 23);
             InputMasterKey.TabIndex = 4;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(InputName);
+            flowLayoutPanel1.Controls.Add(InputDescription);
+            flowLayoutPanel1.Controls.Add(InputMasterKey);
+            flowLayoutPanel1.Controls.Add(ButtonCreate);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(3, 12);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(309, 209);
+            flowLayoutPanel1.TabIndex = 5;
             // 
             // FCreateBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(246, 223);
-            Controls.Add(InputMasterKey);
-            Controls.Add(ButtonCreate);
-            Controls.Add(InputDescription);
-            Controls.Add(InputName);
+            ClientSize = new Size(321, 232);
+            Controls.Add(flowLayoutPanel1);
             Name = "FCreateBlock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Создание блока";
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -92,5 +107,6 @@
         private TextBox InputDescription;
         private Button ButtonCreate;
         private TextBox InputMasterKey;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

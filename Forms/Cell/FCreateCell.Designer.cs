@@ -39,7 +39,7 @@
             // 
             InputName.Location = new Point(12, 12);
             InputName.Name = "InputName";
-            InputName.PlaceholderText = "Нзвание";
+            InputName.PlaceholderText = "Название";
             InputName.Size = new Size(222, 23);
             InputName.TabIndex = 2;
             // 
@@ -90,6 +90,7 @@
             Controls.Add(InputDescription);
             Controls.Add(InputName);
             Name = "FCreateCell";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Создание ячейки";
             ResumeLayout(false);
             PerformLayout();

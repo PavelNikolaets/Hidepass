@@ -74,7 +74,7 @@
             // 
             InputName.Location = new Point(12, 12);
             InputName.Name = "InputName";
-            InputName.PlaceholderText = "Нзвание";
+            InputName.PlaceholderText = "Название";
             InputName.Size = new Size(222, 23);
             InputName.TabIndex = 7;
             // 
@@ -90,6 +90,7 @@
             Controls.Add(InputDescription);
             Controls.Add(InputName);
             Name = "FChangeCell";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Изменение ячейки";
             ResumeLayout(false);
             PerformLayout();

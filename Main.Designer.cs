@@ -48,6 +48,7 @@
             // 
             // ListBlocks
             // 
+            ListBlocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             ListBlocks.FormattingEnabled = true;
             ListBlocks.HorizontalScrollbar = true;
             ListBlocks.ItemHeight = 15;
@@ -60,7 +61,7 @@
             // 
             // ListCells
             // 
-            ListCells.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            ListCells.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ListCells.FormattingEnabled = true;
             ListCells.HorizontalScrollbar = true;
             ListCells.ItemHeight = 15;
@@ -148,6 +149,7 @@
             // 
             // MenuTools
             // 
+            MenuTools.GripStyle = ToolStripGripStyle.Hidden;
             MenuTools.Items.AddRange(new ToolStripItem[] { Files, toolStripBtnAbout });
             MenuTools.Location = new Point(5, 5);
             MenuTools.Name = "MenuTools";
@@ -203,8 +205,10 @@
             Controls.Add(ButtonCreateBlock);
             Controls.Add(ListCells);
             Controls.Add(ListBlocks);
+            MinimumSize = new Size(816, 489);
             Name = "Main";
             Padding = new Padding(5);
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Passhide";
             MenuTools.ResumeLayout(false);
             MenuTools.PerformLayout();

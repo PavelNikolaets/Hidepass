@@ -1,5 +1,6 @@
 ﻿
 using Hidepass.ObjectTemplates;
+using Hidepass.Logic;
 
 namespace Hidepass.Forms.Cell
 {
@@ -17,7 +18,16 @@ namespace Hidepass.Forms.Cell
             LabelLogin.Text = "Логин: " + obj.Login;
             LabelPassword.Text = "Пароль: " + obj.Password;
             LabelTimeCreate.Text = "Дата создания: " + obj.DateCreate;
-            LabelTimeUpdate.Text = "Дата изменения: " + obj.DateUpdate;
+            LabelTimeUpdate.Text = obj.DateUpdate == "" ? "Дата изменения: изменений не было" : "Дата изменения: " + obj.DateUpdate;
+
+            InitPasswordCheckBar();
+        }
+
+        private void InitPasswordCheckBar()
+        {
+            int passwordStrength = PasswordStrengthChecker.Evaluate(Obj.Password);
+            BarPasswordСomplexity.Value = passwordStrength;
+            LblPasswordStrength.Text = $"Сила пароля: {passwordStrength}/5";
         }
 
         private void ButtonCopyLogin_Click(object sender, EventArgs e)

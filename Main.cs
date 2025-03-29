@@ -78,7 +78,7 @@ namespace Hidepass
         {
             if (SelectedBlockIndex >= 0)
             {
-                if (MessageBox.Show(text: "Вы действительно хотите удалить блок?", caption: "Удалить?", buttons: MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Вы действительно хотите удалить блок?", "Удалить?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
@@ -107,7 +107,7 @@ namespace Hidepass
 
             if (index >= 0 && CurrentMasterKey != "")
             {
-                if (MessageBox.Show(text: "Вы действительно хотите удалить ячейку?", caption: "Удалить?", buttons: MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Вы действительно хотите удалить ячейку?", "Удалить?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
 
@@ -145,11 +145,18 @@ namespace Hidepass
                 string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
                 string encryptedCellData = File.ReadAllText(path);
-                RootCell rootCell = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData, CurrentMasterKey));
-                CellObject obj = rootCell.Cells[index];
+                try
+                {
+                    RootCell rootCell = JsonService.ToObject<RootCell>(CryptographyModule.Decrypt(encryptedCellData, CurrentMasterKey));
+                    CellObject obj = rootCell.Cells[index];
 
-                FChangeCell fChangeCell = new(obj, path, index);
-                fChangeCell.Show();
+                    FChangeCell fChangeCell = new(obj, path, index);
+                    fChangeCell.Show();
+                }
+                catch
+                {
+                    return;
+                }
 
             }
         }
@@ -174,17 +181,19 @@ namespace Hidepass
         {
             if (SelectedBlockIndex >= 0 && CurrentMasterKey != string.Empty)
             {
-                using SaveFileDialog saveFileDialog = new()
-                {
-                    DefaultExt = ".txt",
-                    AddExtension = true,
-                };
-
                 string jsonBlock = File.ReadAllText(GPathToFileMetadata);
                 BlockObject blockObj = JsonService.ToObject<RootBlock>(jsonBlock).Blocks[SelectedBlockIndex];
 
                 string rootCellObjDecrypt = CryptographyModule.Decrypt(File.ReadAllText(blockObj.PathToFile), CurrentMasterKey);
                 RootCell rootCellObj = JsonService.ToObject<RootCell>(rootCellObjDecrypt);
+
+                using SaveFileDialog saveFileDialog = new()
+                {
+                    FileName = blockObj.Name,
+                    Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*",
+                    DefaultExt = "*.txt",
+                    AddExtension = true,
+                };
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -193,12 +202,18 @@ namespace Hidepass
                     ControllerExportImport.ControllerExport(name, blockObj, rootCellObj, CurrentMasterKey);
                 }
             }
+            else if (CurrentMasterKey == string.Empty)
+            {
+                MessageBox.Show("Перед тем как экспортировать блок вам нужно ввести от него ключ", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void ListBlocks_MouseClick(object sender, MouseEventArgs e)
         {
             SelectedBlockIndex = ListBlocks.IndexFromPoint(e.Location);
             ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
+            CurrentMasterKey = string.Empty;
+            ListCells.Items.Clear();
         }
 
         private void toolStripBtnAbout_Click(object sender, EventArgs e)
