@@ -51,12 +51,12 @@
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
             InputDescription.ScrollBars = ScrollBars.Vertical;
-            InputDescription.Size = new Size(303, 96);
+            InputDescription.Size = new Size(303, 174);
             InputDescription.TabIndex = 2;
             // 
             // ButtonCreate
             // 
-            ButtonCreate.Location = new Point(3, 163);
+            ButtonCreate.Location = new Point(3, 241);
             ButtonCreate.Name = "ButtonCreate";
             ButtonCreate.Size = new Size(303, 43);
             ButtonCreate.TabIndex = 3;
@@ -66,7 +66,7 @@
             // 
             // InputMasterKey
             // 
-            InputMasterKey.Location = new Point(3, 134);
+            InputMasterKey.Location = new Point(3, 212);
             InputMasterKey.Name = "InputMasterKey";
             InputMasterKey.PlaceholderText = "Мастер пароль";
             InputMasterKey.Size = new Size(303, 23);
@@ -74,15 +74,14 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(InputName);
             flowLayoutPanel1.Controls.Add(InputDescription);
             flowLayoutPanel1.Controls.Add(InputMasterKey);
             flowLayoutPanel1.Controls.Add(ButtonCreate);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(3, 12);
+            flowLayoutPanel1.Location = new Point(12, 12);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(309, 209);
+            flowLayoutPanel1.Size = new Size(310, 287);
             flowLayoutPanel1.TabIndex = 5;
             // 
             // FCreateBlock
@@ -90,15 +89,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(321, 232);
+            ClientSize = new Size(334, 311);
             Controls.Add(flowLayoutPanel1);
+            MaximizeBox = false;
+            MaximumSize = new Size(350, 350);
+            MinimizeBox = false;
+            MinimumSize = new Size(350, 350);
             Name = "FCreateBlock";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Создание блока";
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

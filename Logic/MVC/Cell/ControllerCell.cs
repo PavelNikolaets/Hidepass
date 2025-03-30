@@ -3,12 +3,12 @@ namespace Hidepass.Logic.MVC.Cell
 {
     internal class ControllerCell
     {
-        public static void ControllerCreateCell(string name, string description, string login, string password, string pathToBlock, string dateCreate, string key)
+        public static void ControllerCreateCell(string name, string description, string login, string password, string pathToBlock, string dateCreate, string key, string dateUpdate = "")
         {
             string[] paramAll = [name, login, password, pathToBlock];
             if (paramAll.All(p => p != ""))
             {
-                ModelCell.ModelCreateCell(name, description, login, password, key, dateCreate, pathToBlock);
+                ModelCell.ModelCreateCell(name, description, login, password, key, dateCreate, pathToBlock, dateUpdate);
             }
             else
             {

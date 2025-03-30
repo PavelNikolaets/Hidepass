@@ -21,9 +21,9 @@ namespace Hidepass.Logic.MVC
 
         public static void DisplayCells(ListBox listCells, string path, string key)
         {
+            string encryptedJson = File.ReadAllText(path);
             try
             {
-                string encryptedJson = File.ReadAllText(path);
                 string json = CryptographyModule.Decrypt(encryptedJson, key);
                 RootCell cells = JsonService.ToObject<RootCell>(json);
 
@@ -41,7 +41,7 @@ namespace Hidepass.Logic.MVC
             
         }
 
-        public static void DisplayLabelDescription(Label label, int index, string key)
+        public static void DisplayLabelDescription(Label label, int index)
         {
             if (index >= 0)
             {

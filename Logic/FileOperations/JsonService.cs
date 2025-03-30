@@ -22,7 +22,7 @@ namespace Hidepass.Logic.FileOperations
             {
                 return JsonSerializer.Deserialize<T>(json);
             }
-            catch (JsonException)
+            catch
             {
                 return default;
             }

@@ -21,6 +21,8 @@ namespace Hidepass.Forms.Cell
             LabelTimeUpdate.Text = obj.DateUpdate == "" ? "Дата изменения: изменений не было" : "Дата изменения: " + obj.DateUpdate;
 
             InitPasswordCheckBar();
+
+            this.MaximumSize = this.Size;
         }
 
         private void InitPasswordCheckBar()

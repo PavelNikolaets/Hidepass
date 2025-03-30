@@ -10,10 +10,17 @@ namespace Hidepass.Logic.FileOperations
     {
         public static void ImportPassword(ImportExportPassword importPassword)
         {
-            BlockObject blockObj = importPassword.BlockInfo;
+            try
+            {
+                BlockObject blockObj = importPassword.BlockInfo;
 
-            ControllerBlock.ControllerCreateBlock(blockObj.Name, blockObj.Description, importPassword.MasterKey, blockObj.PathToFile);
-            importPassword.Cells.ForEach(cell => ControllerCell.ControllerCreateCell(cell.Name, cell.Description, cell.Login, cell.Password, blockObj.PathToFile, cell.DateCreate, importPassword.MasterKey));
+                ControllerBlock.ControllerCreateBlock(blockObj.Name, blockObj.Description, importPassword.MasterKey, blockObj.PathToFile);
+                importPassword.Cells.ForEach(cell => ControllerCell.ControllerCreateCell(cell.Name, cell.Description, cell.Login, cell.Password, blockObj.PathToFile, cell.DateCreate, importPassword.MasterKey, cell.DateUpdate));
+            }
+            catch
+            {
+                MessageBox.Show($"Произошла ошибка при импорте!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public static string ExportPassword(BlockObject block, RootCell cell, string key)

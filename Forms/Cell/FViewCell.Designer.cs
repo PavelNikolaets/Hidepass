@@ -40,6 +40,7 @@
             flowLayoutPanel2 = new FlowLayoutPanel();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            flowLayoutPanel5 = new FlowLayoutPanel();
             groupBox3 = new GroupBox();
             flowLayoutPanel4 = new FlowLayoutPanel();
             BarPasswordСomplexity = new ProgressBar();
@@ -49,6 +50,7 @@
             flowLayoutPanel2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            flowLayoutPanel5.SuspendLayout();
             groupBox3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel3.SuspendLayout();
@@ -102,11 +104,11 @@
             // 
             LabelTimeCreate.AutoSize = true;
             LabelTimeCreate.BorderStyle = BorderStyle.Fixed3D;
-            LabelTimeCreate.Dock = DockStyle.Bottom;
-            LabelTimeCreate.Location = new Point(5, 308);
+            LabelTimeCreate.Dock = DockStyle.Fill;
+            LabelTimeCreate.Location = new Point(5, 302);
             LabelTimeCreate.Margin = new Padding(5);
             LabelTimeCreate.Name = "LabelTimeCreate";
-            LabelTimeCreate.Size = new Size(187, 17);
+            LabelTimeCreate.Size = new Size(208, 17);
             LabelTimeCreate.TabIndex = 4;
             LabelTimeCreate.Text = "Дата создания: 00.00.0000 00:00";
             // 
@@ -136,11 +138,11 @@
             // 
             LabelTimeUpdate.AutoSize = true;
             LabelTimeUpdate.BorderStyle = BorderStyle.Fixed3D;
-            LabelTimeUpdate.Dock = DockStyle.Bottom;
-            LabelTimeUpdate.Location = new Point(5, 335);
+            LabelTimeUpdate.Dock = DockStyle.Fill;
+            LabelTimeUpdate.Location = new Point(5, 329);
             LabelTimeUpdate.Margin = new Padding(5);
             LabelTimeUpdate.Name = "LabelTimeUpdate";
-            LabelTimeUpdate.Size = new Size(187, 17);
+            LabelTimeUpdate.Size = new Size(208, 17);
             LabelTimeUpdate.TabIndex = 7;
             LabelTimeUpdate.Text = "Дата изменения: 00.00.0000 00:00";
             // 
@@ -149,9 +151,10 @@
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(LabelLogin);
             flowLayoutPanel1.Controls.Add(ButtonCopyLogin);
-            flowLayoutPanel1.Location = new Point(6, 22);
+            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Location = new Point(3, 3);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(111, 27);
+            flowLayoutPanel1.Size = new Size(144, 27);
             flowLayoutPanel1.TabIndex = 8;
             // 
             // flowLayoutPanel2
@@ -159,9 +162,10 @@
             flowLayoutPanel2.AutoSize = true;
             flowLayoutPanel2.Controls.Add(LabelPassword);
             flowLayoutPanel2.Controls.Add(ButtonCopyPassword);
-            flowLayoutPanel2.Location = new Point(5, 55);
+            flowLayoutPanel2.Dock = DockStyle.Top;
+            flowLayoutPanel2.Location = new Point(3, 36);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(126, 27);
+            flowLayoutPanel2.Size = new Size(144, 27);
             flowLayoutPanel2.TabIndex = 9;
             // 
             // groupBox1
@@ -169,10 +173,10 @@
             groupBox1.AutoSize = true;
             groupBox1.Controls.Add(LabelDescription);
             groupBox1.Controls.Add(LabelName);
-            groupBox1.Dock = DockStyle.Top;
+            groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(191, 92);
+            groupBox1.Size = new Size(212, 92);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "Основное о ячейке";
@@ -180,23 +184,33 @@
             // groupBox2
             // 
             groupBox2.AutoSize = true;
-            groupBox2.Controls.Add(groupBox3);
-            groupBox2.Controls.Add(flowLayoutPanel2);
-            groupBox2.Controls.Add(flowLayoutPanel1);
-            groupBox2.Dock = DockStyle.Top;
+            groupBox2.Controls.Add(flowLayoutPanel5);
+            groupBox2.Dock = DockStyle.Fill;
             groupBox2.Location = new Point(3, 101);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(191, 199);
+            groupBox2.Size = new Size(212, 193);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             groupBox2.Text = "Учетные данные";
             // 
+            // flowLayoutPanel5
+            // 
+            flowLayoutPanel5.AutoSize = true;
+            flowLayoutPanel5.Controls.Add(flowLayoutPanel1);
+            flowLayoutPanel5.Controls.Add(flowLayoutPanel2);
+            flowLayoutPanel5.Controls.Add(groupBox3);
+            flowLayoutPanel5.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel5.Location = new Point(6, 22);
+            flowLayoutPanel5.Name = "flowLayoutPanel5";
+            flowLayoutPanel5.Size = new Size(200, 149);
+            flowLayoutPanel5.TabIndex = 14;
+            // 
             // groupBox3
             // 
-            groupBox3.Anchor = AnchorStyles.Left;
             groupBox3.AutoSize = true;
             groupBox3.Controls.Add(flowLayoutPanel4);
-            groupBox3.Location = new Point(5, 100);
+            groupBox3.Dock = DockStyle.Bottom;
+            groupBox3.Location = new Point(3, 69);
             groupBox3.Margin = new Padding(3, 3, 3, 1);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(144, 79);
@@ -218,6 +232,7 @@
             // BarPasswordСomplexity
             // 
             BarPasswordСomplexity.Location = new Point(3, 3);
+            BarPasswordСomplexity.MarqueeAnimationSpeed = 1;
             BarPasswordСomplexity.Maximum = 5;
             BarPasswordСomplexity.Minimum = 1;
             BarPasswordСomplexity.Name = "BarPasswordСomplexity";
@@ -256,6 +271,8 @@
             AutoSize = true;
             ClientSize = new Size(295, 359);
             Controls.Add(flowLayoutPanel3);
+            MaximizeBox = false;
+            MinimizeBox = false;
             MinimumSize = new Size(311, 398);
             Name = "FViewCell";
             StartPosition = FormStartPosition.CenterScreen;
@@ -268,6 +285,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            flowLayoutPanel5.ResumeLayout(false);
+            flowLayoutPanel5.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             flowLayoutPanel4.ResumeLayout(false);
@@ -297,5 +316,6 @@
         private GroupBox groupBox3;
         private FlowLayoutPanel flowLayoutPanel4;
         private Label LblPasswordStrength;
+        private FlowLayoutPanel flowLayoutPanel5;
     }
 }

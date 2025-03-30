@@ -13,7 +13,16 @@ namespace Hidepass.Logic.MVC.Block
             {
                 if (name.Contains('\\') == false)
                 {
-                    ModelBlock.ModelCreateBlock(name, description, key, pathToBlock);
+                    string path = $@"{Main.GPathToDir}\{name}.json";
+
+                    if (File.Exists(path) == false)
+                    {
+                        ModelBlock.ModelCreateBlock(name, description, key, pathToBlock);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Вы не можете создавать блоки с одинаковым названием!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -32,7 +41,9 @@ namespace Hidepass.Logic.MVC.Block
 
         public static void ControllerChangeBlock(int index, string name, string description, string key)
         {
-            if (JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata)).Blocks.Count >= index)
+            RootBlock obj = JsonService.ToObject<RootBlock>(File.ReadAllText(Main.GPathToFileMetadata));
+
+            if (obj.Blocks.Count >= index)
             {
                 ModelBlock.ModelChangeBlock(index, name, description, key);
             }

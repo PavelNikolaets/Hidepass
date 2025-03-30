@@ -188,7 +188,7 @@
             toolStripBtnAbout.Name = "toolStripBtnAbout";
             toolStripBtnAbout.Size = new Size(67, 22);
             toolStripBtnAbout.Text = "О проекте";
-            toolStripBtnAbout.Click += toolStripBtnAbout_Click;
+            toolStripBtnAbout.Click += ToolStripBtnAbout_Click;
             // 
             // Main
             // 

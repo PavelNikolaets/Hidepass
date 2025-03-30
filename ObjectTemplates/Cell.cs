@@ -7,13 +7,13 @@ namespace Hidepass.ObjectTemplates
         public string Key { get; set; } = key;
     }
 
-    public class CellObject(string Name, string Description, string Login, string Password, string DateCreate)
+    public class CellObject(string Name, string Description, string Login, string Password, string DateCreate, string DateUpdate = "")
     {
         public string Name { get; set; } = Name;
         public string Description { get; set; } = Description;
         public string Login { get; set; } = Login;
         public string Password { get; set; } = Password;
         public string DateCreate { get; } = DateCreate;
-        public string DateUpdate { get; set; } = "";
+        public string DateUpdate { get; set; } = DateUpdate;
     }
 }

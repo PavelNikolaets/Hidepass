@@ -53,7 +53,7 @@ namespace Hidepass
                     ViewPassword.DisplayCells(ListCells, path, CurrentMasterKey);
                 }
 
-                ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
+                ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex);
             }
         }
 
@@ -83,7 +83,7 @@ namespace Hidepass
                     string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
                     ControllerBlock.ControllerDeleteBlock(path, SelectedBlockIndex, CurrentMasterKey);
-                    ViewPassword.DisplayLabelDescription(BlockDescription, -1, CurrentMasterKey);
+                    BlockDescription.Text = "Описание: ";
                 }
             }
         }
@@ -204,19 +204,19 @@ namespace Hidepass
             }
             else if (CurrentMasterKey == string.Empty)
             {
-                MessageBox.Show("Перед тем как экспортировать блок вам нужно ввести от него ключ", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Перед тем как экспортировать блок вам нужно ввести от него ключ выбрав его из списка блоков!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void ListBlocks_MouseClick(object sender, MouseEventArgs e)
         {
             SelectedBlockIndex = ListBlocks.IndexFromPoint(e.Location);
-            ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex, CurrentMasterKey);
+            ViewPassword.DisplayLabelDescription(BlockDescription, SelectedBlockIndex);
             CurrentMasterKey = string.Empty;
             ListCells.Items.Clear();
         }
 
-        private void toolStripBtnAbout_Click(object sender, EventArgs e)
+        private void ToolStripBtnAbout_Click(object sender, EventArgs e)
         {
             string textAbout = File.ReadAllText(@"about.txt");
             MessageBox.Show(textAbout, "О проекте");

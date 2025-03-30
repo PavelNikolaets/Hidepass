@@ -33,13 +33,15 @@
             InputLogin = new TextBox();
             InputDescription = new TextBox();
             InputName = new TextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 230);
+            button1.Location = new Point(3, 250);
             button1.Name = "button1";
-            button1.Size = new Size(222, 43);
+            button1.Size = new Size(307, 43);
             button1.TabIndex = 11;
             button1.Text = "Изменить";
             button1.UseVisualStyleBackColor = true;
@@ -47,51 +49,67 @@
             // 
             // InputPassword
             // 
-            InputPassword.Location = new Point(12, 201);
+            InputPassword.Location = new Point(3, 221);
             InputPassword.Name = "InputPassword";
             InputPassword.PlaceholderText = "Пароль";
-            InputPassword.Size = new Size(222, 23);
+            InputPassword.Size = new Size(307, 23);
             InputPassword.TabIndex = 10;
             // 
             // InputLogin
             // 
-            InputLogin.Location = new Point(12, 172);
+            InputLogin.Location = new Point(3, 192);
             InputLogin.Name = "InputLogin";
             InputLogin.PlaceholderText = "Логин";
-            InputLogin.Size = new Size(222, 23);
+            InputLogin.Size = new Size(307, 23);
             InputLogin.TabIndex = 9;
             // 
             // InputDescription
             // 
-            InputDescription.Location = new Point(12, 41);
+            InputDescription.Location = new Point(3, 32);
             InputDescription.Multiline = true;
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
-            InputDescription.Size = new Size(222, 125);
+            InputDescription.Size = new Size(307, 154);
             InputDescription.TabIndex = 8;
             // 
             // InputName
             // 
-            InputName.Location = new Point(12, 12);
+            InputName.Location = new Point(3, 3);
             InputName.Name = "InputName";
             InputName.PlaceholderText = "Название";
-            InputName.Size = new Size(222, 23);
+            InputName.Size = new Size(307, 23);
             InputName.TabIndex = 7;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(InputName);
+            flowLayoutPanel1.Controls.Add(InputDescription);
+            flowLayoutPanel1.Controls.Add(InputLogin);
+            flowLayoutPanel1.Controls.Add(InputPassword);
+            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(12, 3);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(313, 296);
+            flowLayoutPanel1.TabIndex = 12;
             // 
             // FChangeCell
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(246, 281);
-            Controls.Add(button1);
-            Controls.Add(InputPassword);
-            Controls.Add(InputLogin);
-            Controls.Add(InputDescription);
-            Controls.Add(InputName);
+            ClientSize = new Size(334, 311);
+            Controls.Add(flowLayoutPanel1);
+            MaximizeBox = false;
+            MaximumSize = new Size(350, 350);
+            MinimizeBox = false;
+            MinimumSize = new Size(350, 350);
             Name = "FChangeCell";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Изменение ячейки";
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,5 +121,6 @@
         private TextBox InputLogin;
         private TextBox InputDescription;
         private TextBox InputName;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
