@@ -103,13 +103,13 @@ namespace Hidepass
 
         private void ButtonDeleteCell_Click(object sender, EventArgs e)
         {
-            int index = ListBlocks.SelectedIndex;
+            int index = ListCells.SelectedIndex;
 
             if (index >= 0 && CurrentMasterKey != "")
             {
                 if (MessageBox.Show("Вы действительно хотите удалить ячейку?", "Удалить?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[index].PathToFile;
+                    string path = JsonService.ToObject<RootBlock>(File.ReadAllText(GPathToFileMetadata)).Blocks[SelectedBlockIndex].PathToFile;
 
                     ControllerCell.ControlerDeleteCell(path, index, CurrentMasterKey);
                 }

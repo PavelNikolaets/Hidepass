@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCreateBlock));
             InputName = new TextBox();
             InputDescription = new TextBox();
             ButtonCreate = new Button();
@@ -91,6 +92,7 @@
             AutoSize = true;
             ClientSize = new Size(334, 311);
             Controls.Add(flowLayoutPanel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(350, 350);
             MinimizeBox = false;

@@ -205,11 +205,12 @@
             Controls.Add(ButtonCreateBlock);
             Controls.Add(ListCells);
             Controls.Add(ListBlocks);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(816, 489);
             Name = "Main";
             Padding = new Padding(5);
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Passhide";
+            Text = "Hidepass";
             MenuTools.ResumeLayout(false);
             MenuTools.PerformLayout();
             ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FViewCell));
             LabelName = new Label();
             LabelDescription = new Label();
             LabelLogin = new Label();
@@ -170,10 +171,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.AutoSize = true;
             groupBox1.Controls.Add(LabelDescription);
             groupBox1.Controls.Add(LabelName);
-            groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(212, 92);
@@ -271,6 +272,7 @@
             AutoSize = true;
             ClientSize = new Size(295, 359);
             Controls.Add(flowLayoutPanel3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             MinimumSize = new Size(311, 398);
