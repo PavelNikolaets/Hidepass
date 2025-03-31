@@ -8,6 +8,7 @@ namespace Hidepass.Forms.Block
         public FCreateBlock()
         {
             InitializeComponent();
+            this.Font = new("Arial", 9);
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)

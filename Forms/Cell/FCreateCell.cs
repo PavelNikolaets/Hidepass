@@ -10,6 +10,9 @@ namespace Hidepass.Forms.Cell
         public FCreateCell(string pathToBlock)
         {
             InitializeComponent();
+
+            this.Font = new("Arial", 9);
+
             PathToBlock = pathToBlock;
         }
 

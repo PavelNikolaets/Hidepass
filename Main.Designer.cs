@@ -49,6 +49,7 @@
             // ListBlocks
             // 
             ListBlocks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            ListBlocks.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ListBlocks.FormattingEnabled = true;
             ListBlocks.HorizontalScrollbar = true;
             ListBlocks.ItemHeight = 15;
@@ -205,6 +206,7 @@
             Controls.Add(ButtonCreateBlock);
             Controls.Add(ListCells);
             Controls.Add(ListBlocks);
+            Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(816, 489);
             Name = "Main";

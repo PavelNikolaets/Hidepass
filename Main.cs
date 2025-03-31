@@ -31,6 +31,9 @@ namespace Hidepass
             Initialization.ComponentsCheck(GPathToDir, GPathToFileMetadata);
             InitializeComponent();
 
+            this.Font = new("Arial", 9);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
             GListBlocks = ListBlocks;
             GListCells = ListCells;
 

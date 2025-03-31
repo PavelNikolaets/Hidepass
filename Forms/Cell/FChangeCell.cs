@@ -12,6 +12,9 @@ namespace Hidepass.Forms.Cell
         public FChangeCell(CellObject obj, string path, int index)
         {
             InitializeComponent();
+
+            this.Font = new("Arial", 9);
+
             Obj = obj;
             Path = path;
             Index = index;

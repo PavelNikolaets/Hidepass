@@ -11,6 +11,9 @@ namespace Hidepass.Forms.Cell
         public FViewCell(CellObject obj)
         {
             InitializeComponent();
+
+            this.Font = new("Arial", 9);
+
             Obj = obj;
 
             LabelName.Text = "Название: " + obj.Name;

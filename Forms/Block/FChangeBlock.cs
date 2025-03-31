@@ -13,6 +13,8 @@ namespace Hidepass.Forms.Block
         {
             InitializeComponent();
 
+            this.Font = new("Arial", 9);
+
             Obj = obj;
             Index = index;
 

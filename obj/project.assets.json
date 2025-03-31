@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Hidepass.csproj",
+      "projectUniqueName": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj",
       "projectName": "Hidepass",
-      "projectPath": "C:\\Users\\pavel\\source\\repos\\Hidepass\\Hidepass.csproj",
+      "projectPath": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj",
       "packagesPath": "C:\\Users\\pavel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pavel\\source\\repos\\Hidepass\\obj\\",
+      "outputPath": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
