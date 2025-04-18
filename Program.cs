@@ -1,6 +1,4 @@
 
-using Hidepass.Logic.FileOperations;
-
 namespace Hidepass
 {
     internal static class Program

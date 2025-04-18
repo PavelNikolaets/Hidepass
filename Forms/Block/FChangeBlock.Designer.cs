@@ -32,13 +32,11 @@
             InputName = new TextBox();
             InputDescription = new TextBox();
             ButtonChange = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // InputName
             // 
-            InputName.Location = new Point(3, 3);
+            InputName.Location = new Point(12, 12);
             InputName.Name = "InputName";
             InputName.PlaceholderText = "Название";
             InputName.Size = new Size(307, 23);
@@ -46,7 +44,7 @@
             // 
             // InputDescription
             // 
-            InputDescription.Location = new Point(3, 32);
+            InputDescription.Location = new Point(12, 41);
             InputDescription.Multiline = true;
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
@@ -56,7 +54,7 @@
             // 
             // ButtonChange
             // 
-            ButtonChange.Location = new Point(3, 223);
+            ButtonChange.Location = new Point(12, 232);
             ButtonChange.Name = "ButtonChange";
             ButtonChange.Size = new Size(307, 54);
             ButtonChange.TabIndex = 2;
@@ -64,25 +62,15 @@
             ButtonChange.UseVisualStyleBackColor = true;
             ButtonChange.Click += ButtonChange_Click;
             // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.Controls.Add(InputName);
-            flowLayoutPanel1.Controls.Add(InputDescription);
-            flowLayoutPanel1.Controls.Add(ButtonChange);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(12, 9);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(313, 290);
-            flowLayoutPanel1.TabIndex = 3;
-            // 
             // FChangeBlock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(334, 311);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(InputName);
+            Controls.Add(InputDescription);
+            Controls.Add(ButtonChange);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(350, 350);
@@ -91,8 +79,6 @@
             Name = "FChangeBlock";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Изменение блока";
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,6 +88,5 @@
         private TextBox InputName;
         private TextBox InputDescription;
         private Button ButtonChange;
-        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

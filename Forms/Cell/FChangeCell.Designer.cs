@@ -34,13 +34,11 @@
             InputLogin = new TextBox();
             InputDescription = new TextBox();
             InputName = new TextBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(3, 250);
+            button1.Location = new Point(12, 259);
             button1.Name = "button1";
             button1.Size = new Size(307, 43);
             button1.TabIndex = 11;
@@ -50,7 +48,7 @@
             // 
             // InputPassword
             // 
-            InputPassword.Location = new Point(3, 221);
+            InputPassword.Location = new Point(12, 230);
             InputPassword.Name = "InputPassword";
             InputPassword.PlaceholderText = "Пароль";
             InputPassword.Size = new Size(307, 23);
@@ -58,7 +56,7 @@
             // 
             // InputLogin
             // 
-            InputLogin.Location = new Point(3, 192);
+            InputLogin.Location = new Point(12, 201);
             InputLogin.Name = "InputLogin";
             InputLogin.PlaceholderText = "Логин";
             InputLogin.Size = new Size(307, 23);
@@ -66,7 +64,7 @@
             // 
             // InputDescription
             // 
-            InputDescription.Location = new Point(3, 32);
+            InputDescription.Location = new Point(12, 41);
             InputDescription.Multiline = true;
             InputDescription.Name = "InputDescription";
             InputDescription.PlaceholderText = "Описание";
@@ -75,25 +73,11 @@
             // 
             // InputName
             // 
-            InputName.Location = new Point(3, 3);
+            InputName.Location = new Point(12, 12);
             InputName.Name = "InputName";
             InputName.PlaceholderText = "Название";
             InputName.Size = new Size(307, 23);
             InputName.TabIndex = 7;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.Controls.Add(InputName);
-            flowLayoutPanel1.Controls.Add(InputDescription);
-            flowLayoutPanel1.Controls.Add(InputLogin);
-            flowLayoutPanel1.Controls.Add(InputPassword);
-            flowLayoutPanel1.Controls.Add(button1);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(12, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(313, 296);
-            flowLayoutPanel1.TabIndex = 12;
             // 
             // FChangeCell
             // 
@@ -101,7 +85,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(334, 311);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(InputName);
+            Controls.Add(InputDescription);
+            Controls.Add(InputLogin);
+            Controls.Add(button1);
+            Controls.Add(InputPassword);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(350, 350);
@@ -110,8 +98,6 @@
             Name = "FChangeCell";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Изменение ячейки";
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,6 +109,5 @@
         private TextBox InputLogin;
         private TextBox InputDescription;
         private TextBox InputName;
-        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

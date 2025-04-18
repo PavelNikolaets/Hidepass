@@ -44,3 +44,26 @@ C:\Users\pavel\Desktop\Курсовая\Hidepass\obj\Debug\net8.0-windows\refint
 C:\Users\pavel\Desktop\Курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.pdb
 C:\Users\pavel\Desktop\Курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.genruntimeconfig.cache
 C:\Users\pavel\Desktop\Курсовая\Hidepass\obj\Debug\net8.0-windows\ref\Hidepass.dll
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\bin\Debug\net8.0-windows\Hidepass.exe
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\bin\Debug\net8.0-windows\Hidepass.deps.json
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\bin\Debug\net8.0-windows\Hidepass.runtimeconfig.json
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\bin\Debug\net8.0-windows\Hidepass.dll
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\bin\Debug\net8.0-windows\Hidepass.pdb
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Block.FChangeBlock.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Block.FCreateBlock.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FChangeCell.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FCreateCell.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Forms.Cell.FViewCell.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Main.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.Properties.Resources.resources
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.csproj.GenerateResource.cache
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.AssemblyInfoInputs.cache
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.AssemblyInfo.cs
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.csproj.CoreCompileInputs.cache
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.sourcelink.json
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.dll
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\refint\Hidepass.dll
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.pdb
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\Hidepass.genruntimeconfig.cache
+C:\Users\pavel\Desktop\Проект курсовая\Hidepass\obj\Debug\net8.0-windows\ref\Hidepass.dll

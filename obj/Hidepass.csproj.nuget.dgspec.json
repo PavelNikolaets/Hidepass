@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj": {}
+    "C:\\Users\\pavel\\Desktop\\Проект курсовая\\Hidepass\\Hidepass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj": {
+    "C:\\Users\\pavel\\Desktop\\Проект курсовая\\Hidepass\\Hidepass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj",
+        "projectUniqueName": "C:\\Users\\pavel\\Desktop\\Проект курсовая\\Hidepass\\Hidepass.csproj",
         "projectName": "Hidepass",
-        "projectPath": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\Hidepass.csproj",
+        "projectPath": "C:\\Users\\pavel\\Desktop\\Проект курсовая\\Hidepass\\Hidepass.csproj",
         "packagesPath": "C:\\Users\\pavel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pavel\\Desktop\\Курсовая\\Hidepass\\obj\\",
+        "outputPath": "C:\\Users\\pavel\\Desktop\\Проект курсовая\\Hidepass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
