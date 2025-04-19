@@ -86,11 +86,9 @@ namespace Hidepass.Logic.OperationCryptography
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка дешифрования. Убдеитесь в правильности введеного ключа! \nОшибка: {ex.Message}", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ошибка дешифрования. Убедитесь в правильности введеного ключа! \nОшибка: {ex.Message}", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return default;
             }
-            
-            //Косяк
         }
     }
 }
